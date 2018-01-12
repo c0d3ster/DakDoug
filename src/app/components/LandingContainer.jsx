@@ -6,9 +6,9 @@ export default class LandingContainer extends React.Component {
     render() {
     return (
       <div className="landing-container">
-        <ParallaxBackground min={-40} max={50} background="linear-gradient(-10deg, lightgray, darkblue, black)">
+        <ParallaxBackground min={-40} max={50} image="./public/KingsCanyonAstro-2.jpg">
           <div className="landing-content">
-          <h1>Insert Landing Page Title</h1>
+          <h1>Dakota Douglass</h1>
           </div>
         </ParallaxBackground>
       </div>  

@@ -9,7 +9,7 @@ export default class SectionContainer extends React.Component {
         dak doug
         </header>*/}      
         <div className="section-content">
-            <p>{content.about}</p>    
+            <h1>{content.about}</h1>    
         </div>
       </div>
     );
