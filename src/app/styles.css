@@ -1,0 +1,83 @@
+/********** Overall Styles **********/
+
+body, html {margin: 0; padding: 0;}
+
+h1 {
+  margin: 0;
+  font-size: 5vw;
+  color: white;
+}
+
+/********** Parallax Styles **********/
+
+/* container used in the ParallaxBackground component 
+it forms the shape which the image will fill*/
+.parallax-container {
+  position: relative;
+  width: 100vw;
+  height: 135vh;
+  overflow: hidden;
+  clip-path: polygon(
+    0 0,
+    100vw 0,
+    100vw 100vh,
+    0 135vh
+  );
+}
+
+/* image/background which will have parallax effect added to it 
+fills the parallax container background */
+.parallax-image {
+  width: 100vw;
+  height: 135vh;
+  background-size: cover;
+  background-position: cover;
+}
+
+/* all children of a ParallaxBackground component will be displayed flex-box from the top-middle */
+.parallax-children {
+  position: absolute;
+  top: 0; 
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/********** Home Route Landing Styles **********/
+
+
+.landing-container {
+
+}
+
+.landing-content {
+  position: absolute;
+  top: 25vh;
+}
+
+/********** Home Route Section Styles **********/
+
+.section-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 135vh;
+  margin-top: -34vh;
+  padding-top: 34vh;
+  background-image: linear-gradient(-10deg, black, gray);
+    clip-path: polygon(
+    0 35vh,
+    100vw 0,
+    100vw 100vh,
+    0 135vh
+  );
+}
+
+.section-content {
+  position: absolute;
+  top: 15vh;
+}
