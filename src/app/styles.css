@@ -9,14 +9,16 @@ body {
     background: darkgrey;
     min-height: 200vh;
     color: white;
-    font-family: 'Futura', 'Helvetica', sans-serif;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-weight: normal;
 }
 
 
 h1 {
   margin: 0;
-  font-size: 5vw;
+  opacity: .5;
+  letter-spacing: 2px;
+  font-size: 3em;
   color: white;
 }
 
@@ -77,13 +79,13 @@ fills the parallax container background */
   align-items: flex-start;
   justify-content: center;
   background: black;
-  height: 155vh;
+  height: 151vh;
   margin-top: -34vh;
   padding-top: 34vh;
     clip-path: polygon(
     0 35vh,
     100vw 0,
-    100vw 155vh,
+    100vw 150vh,
     0 185vh
   );
 }

@@ -12,6 +12,7 @@ export default class App extends React.Component {
         <main>
           <Landing/>
           <Section/>
+          <Section/>
         </main>
       </ParallaxProvider>
       );
