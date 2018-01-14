@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 //const bodyParser = require('body-parser');
 
-const DIST_DIR = path.join(__dirname, "src/public/");
+const DIST_DIR = path.join(__dirname, "public/");
 const PORT = 3000;
 
 //app.use(bodyParser.json());

@@ -7,7 +7,7 @@
   "main": "index.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:dev": "webpack-dev-server --display-error-details --inline --content-base src/public --history-api-fallback",
+    "start:dev": "webpack-dev-server --display-error-details --inline --content-base public --history-api-fallback",
     "start:prod": "webpack && node src/server.js"
   },
   "dependencies": {
