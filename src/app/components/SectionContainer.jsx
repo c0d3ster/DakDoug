@@ -1,17 +1,44 @@
 import React from 'react';
-import content from '../data/content';
+import Header from './Header.jsx';
+import Observed from 'react-observed';
 
-export default class SectionContainer extends React.Component {
-    render() {
-    return (
-      <div className="section-container">
-        {/*<header className="sectionHeader">
-        dak doug
-        </header>*/}      
-        <div className="section-content">
-            <h1>{content.about}</h1>    
-        </div>
+// const SectionContainer = ({ title, navList, children }) => (
+//   <div className="section-container">
+//     <Header title={title} navList={navList}/>     
+//     <div className="section-content">{children}</div>
+//   </div>
+// );
+
+// export default SectionContainer;
+
+// export default class SectionContainer extends React.Component{
+//   render() {
+//     return (
+//       <Observed
+//       intersectionsRatio={.75}>
+//         {({ isInView, mapRef }) => (
+//           <div ref={mapRef} className="section-container">
+//             {isInView ? <Header title={this.props.title} navList={this.props.navList}/> : <div></div>}     
+//             <div className="section-content">{children}</div>
+//           </div>
+//         )}
+//       </Observed>
+//     );
+
+//   }
+// }
+const SectionContainer = ({ title, navList, children }) => console.log("rendering section") || (
+  <div>
+  <Observed intersectionRatio={.1}>
+    {({ isInView, mapRef }) => (
+      <div ref={mapRef} className="section-container">
+        {isInView ? <Header title={title} navList={navList}/> : console.log(isInView) || <div>{isInView}</div>}     
+        <div className="section-content">{children}</div>
       </div>
-    );
-  }
-}
+    )}
+  </Observed>
+  </div>
+);
+
+
+export default SectionContainer;

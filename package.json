@@ -13,8 +13,10 @@
   "dependencies": {
     "express": "^4.14.1",
     "if-env": "^1.0.0",
+    "intersection-observer": "^0.5.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-observed": "^1.0.0-beta.2",
     "react-router": "^4.2.0",
     "react-scroll-parallax": "^1.1.1"
   },

@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import styles from './styles.css';
 import Landing from './components/LandingContainer.jsx';
-import Section from './components/SectionContainer.jsx';
+import AboutMe from './components/AboutMe.jsx';
 
 export default class App extends React.Component {
   render() {
@@ -11,8 +11,7 @@ export default class App extends React.Component {
       <ParallaxProvider>
         <main>
           <Landing/>
-          <Section/>
-          <Section/>
+          <AboutMe/>
         </main>
       </ParallaxProvider>
       );

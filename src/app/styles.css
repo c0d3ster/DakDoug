@@ -1,6 +1,6 @@
 /********** Overall Styles **********/
 html {
-    font-size: 24px; 
+    font-size: 28px; 
 }
 
 body {
@@ -14,13 +14,16 @@ body {
 }
 
 
-h1 {
+h1
+ {
   margin: 0;
   opacity: .5;
   letter-spacing: 2px;
   font-size: 3em;
   color: white;
 }
+
+
 
 /********** Parallax Styles **********/
 
@@ -68,7 +71,15 @@ fills the parallax container background */
 
 .landing-content {
   position: absolute;
-  top: 25vh;
+  top: 15vh;
+}
+
+.landing-text {
+  display: inline;
+}
+
+.twiddle {
+
 }
 
 /********** Home Route Section Styles **********/
@@ -82,7 +93,7 @@ fills the parallax container background */
   height: 151vh;
   margin-top: -34vh;
   padding-top: 34vh;
-    clip-path: polygon(
+  clip-path: polygon(
     0 35vh,
     100vw 0,
     100vw 150vh,
@@ -98,7 +109,7 @@ fills the parallax container background */
   right: 0;
   content: "";
   background: url("../public/RoadTrippin-8.jpg");
-  opacity: .4;
+  opacity: .5;
   z-index: -1;
   background-size: cover;
   background-position: cover;
@@ -107,4 +118,28 @@ fills the parallax container background */
 .section-content {
   position: absolute;
   top: 35vh;
+}
+
+/********** Header Styles **********/
+
+.header-container {
+  position: fixed;
+  z-index: 1;
+  padding-left: 2vw;
+  width: 100vw;
+  height: 35vh;
+  top: 0;
+  left: 0;
+  clip-path: polygon(
+    0 0,
+    100vw 0,
+    0 35vh
+  );
+  background: linear-gradient(175deg, rgba(0,0,0,1), rgba(10,10,10,.9), rgba(0,0,0,0));
+}
+
+.header-title {
+  padding-top: 2vh;
+  width: 40vw;
+  transform: skewY(3deg);
 }
