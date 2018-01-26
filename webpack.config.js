@@ -1,8 +1,8 @@
 var webpack = require('webpack');
 var path = require('path');
 
-var BUILD_DIR = path.join(__dirname, './public');
-var APP_DIR =  path.join(__dirname, './src');
+var BUILD_DIR = path.join(__dirname, 'public');
+var APP_DIR =  path.join(__dirname, 'src');
 
 var config = {
   devtool: "source-map",
@@ -17,7 +17,7 @@ var config = {
   },
   module: {
     loaders: [
-      { test: /\.(js|jsx)$/, loader: 'babel-loader', exclude: /node_modules/, query: {presets: ['es2015', 'react']} },
+      { test: /\.(js|jsx)$/, loader: 'babel-loader', exclude: /node_modules/, query: {presets: ['react', 'env']} },
       { test: /\.css$/, loader: "style-loader!css-loader" },
       { test: /\.json$/, loader: "json-loader" },
       { test: /\.(png|jpg)$/, loader: 'file-loader?name=public/[name].[ext]'}

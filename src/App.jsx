@@ -1,18 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import styles from './styles.css';
-import Landing from './components/LandingContainer.jsx';
-import AboutMe from './components/AboutMe.jsx';
+import Home from './components/Home.jsx';
 
 export default class App extends React.Component {
   render() {
     return (
       <ParallaxProvider>
-        <main>
-          <Landing/>
-          <AboutMe/>
-        </main>
+        <Router>
+          <Route exact path='/' component={Home}/>
+        </Router>
       </ParallaxProvider>
       );
   }

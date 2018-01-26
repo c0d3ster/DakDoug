@@ -4,18 +4,25 @@ import ParallaxBackground from './ParallaxBackground.jsx';
 
 export default class LandingContainer extends React.Component {
     render() {
+      //https://greensock.com/docs/Plugins/ScrollToPlugin
     return (
       <div className="landing-container">
-        <ParallaxBackground min={-40} max={50} image="./KingsCanyonAstro-2.jpg">
+        <ParallaxBackground min={-40} max={50} background="./KingsCanyonAstro-2.jpg">
           <div className="landing-content">
-          <h3 className="landing-text">Developer</h3>
-          <h3 className="landing-text">Photographer</h3>
-          <h1>Dakota Douglass</h1>
-          <h3 className="landing-text">Inventor</h3>
-          <h3 className="landing-text">Explorer</h3>
+            <div className="row">
+              <p className="landing-text col">Developer</p>
+              <p className="landing-text col">Photographer</p>
+            </div>
+            <div className="row">
+              <p className="landing-title col">Dakota Douglass</p>
+            </div>
+            <div className="row">
+              <p className="landing-text col center">Inventor</p>
+              <p className="landing-text col center">Explorer</p>
+            </div>
           </div>
         </ParallaxBackground>
-      </div>  
+      </div>
     );
   }
 }
