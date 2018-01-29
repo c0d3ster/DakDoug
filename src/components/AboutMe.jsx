@@ -5,12 +5,22 @@ import content from '../data/content';
 
 export default class AboutMe extends React.Component {
   render() {
-    let navList = ["About Me", "Projects", "Gallery", "Contact"];
-    this.props.second ? navList.shift() : "";
-    console.log("about me");
+    let navList = ["About Me", "Leadership", "Projects", "Gallery", "Contact"];
     return (
-      <Section background="./RoadTrippin-8.jpg" title="Cody Douglass" navList={navList}>
-        {content.about}
+      <Section background="./VirginiaBeach.jpg" title="Cody Douglass" navList={navList}>
+        <div className="row">
+          <h2 className="about-title col center"> Who Is Cody Douglass?</h2>
+        </div>
+        <div className="row">
+          <p>{content.who}</p>
+          <p>{content.why}</p>
+        </div>
+        {/*<iframe className="about-video"
+          src="https://www.youtube.com/embed/P7G_YggEP4I?rel=0?showinfo=0"
+          frameBorder="0"
+          allow="encrypted-media"
+          allowFullScreen>
+        </iframe>*/}
       </Section>
     );
   }
