@@ -209,17 +209,20 @@ fills the parallax container background */
   margin:0 4vw;
 }
 
+/********** Section Content Styles **********/
+
 .about-content {
-  font-size: .7em;
-}
-
-.about-title {
-
+  font-size: .6em;
 }
 
 .about-video {
   width: 75vw;
   height: 50vh;
+}
+
+.placeholder-content {
+  width: 92vw;
+  height: 100px;
 }
 
 /********** Footer Styles **********/
@@ -246,9 +249,16 @@ fills the parallax container background */
   padding: 0 4vw 4vh 0;
 }
 
-.footer-item {
+.footer-contact {
   transform: skewY(4deg);
   transform-origin: left bottom 0;
   font-size: 1.6em;
   letter-spacing: 2px;
+  margin: 20px;
+}
+
+.footer-item {
+  transform: skewY(4deg);
+  transform-origin: left bottom 0;
+  margin: 5px;
 }
