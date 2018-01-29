@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 const Header = ({ title, navList }) => (
   <div className="header-container">
     <h2 className="header-title">{title}</h2>
