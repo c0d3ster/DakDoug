@@ -10,7 +10,7 @@ export default class Gallery extends React.Component {
           <h2 className="col center">Gallery</h2>
         </div>
         <div className="row">
-          <h2 className="placeholder-content col">Coming soon...</h2>
+          <h2 className="col">Coming soon...</h2>
         </div>
       </Section>
     );
