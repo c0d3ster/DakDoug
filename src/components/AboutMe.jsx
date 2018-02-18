@@ -36,7 +36,7 @@ export default class AboutMe extends React.Component {
       'hidden': (this.state.count == contentList.length-1) || this.state.video
     });
     return (
-      <Section background={backgroundList[this.state.count]} title="Cody Douglass" navList={navList}>
+      <Section background={backgroundList[this.state.count]} title="Cody Douglass" navList={navList} contentClass="about-content-container">
         <div className="row center">
           <div className="col">
             <label className="about-type-text">Intro Type:</label>
