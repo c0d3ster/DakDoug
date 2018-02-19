@@ -268,29 +268,55 @@ fills the parallax container background */
 	height: 100%;
 }
 
-.project-box {
+.project-box-container {
+  position: relative;
   cursor: pointer;
   text-align: center;
-  height: 50vh;
+  background: rgb(25, 25, 25);
+  height: 45vh;
   margin: 0 2vw;
   border: 2px solid black;
-  background-size: cover;
-  background-position: cover;
 }
-.project-box--1 {
+.project-box-container--1 {
   margin-bottom: -15vh;
 }
-.project-box--2 {
+.project-box-container--2 {
   margin: 0 2vw;
 }
-.project-box--3 {
+.project-box-container--3 {
   margin-top: -15vh;
 }
 
-
-.wide-spacer {
-  width: 92vw;
+.project-box-background {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: .5;
+  filter: blur(2px) grayscale(60%);
+  transition: opacity 1s;
 }
+
+.project-box-container:hover .project-box-background {
+  opacity: .75;
+  filter: none;
+}
+
+.project-box-title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  color: rgb(175, 175, 175);
+  font-style: italic;
+  transition: all 1s;
+}
+
+.project-box-container:hover .project-box-title {
+  color:white;
+  font-style: normal;
+}
+
 
 /********** Footer Styles **********/
 

@@ -61,7 +61,7 @@ export default class AboutMe extends React.Component {
               <button className={nextButton} onClick={this.nextItem.bind(this)}>next</button>
             </div>
             <div className="row">
-              <p className="col">{content[currItem]}</p>
+              <p className="col">{content.about[currItem]}</p>
             </div>
           </div>
         }

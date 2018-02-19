@@ -7,8 +7,8 @@ const SectionContainer = ({ background, title, navList, contentClass, children }
   return(
   <div className="section-container">
     <div
-        className="section-background"
-        style={{ backgroundImage: background.match(/\.(png|jpg)$/) ? `url(${background})`: `${background}` }}
+      className="section-background"
+      style={{ backgroundImage: background.match(/\.(png|jpg)$/) ? `url(${background})`: `${background}` }}
     />
     <Header title={title} navList={navList}/>
     <div className={contentClasses}>{children}</div>
