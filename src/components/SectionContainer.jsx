@@ -15,5 +15,4 @@ const SectionContainer = ({ background, title, navList, contentClass, children }
   </div>
 )};
 
-
 export default SectionContainer;

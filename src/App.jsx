@@ -4,6 +4,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import styles from './styles.css';
 import Home from './components/Home.jsx';
 import NotFoundPage from './components/NotFoundPage.jsx';
+import BlockOne from './components/blockone/BlockOne.jsx'
 
 export default class App extends React.Component {
   render() {
@@ -12,6 +13,7 @@ export default class App extends React.Component {
         <Router>
           <Switch>
             <Route exact path='/' component={Home}/>
+            <Route exact path='/blockone' component={BlockOne}/>
             <Route path='*' component={NotFoundPage}/>
           </Switch>
         </Router>

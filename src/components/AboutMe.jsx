@@ -56,7 +56,7 @@ export default class AboutMe extends React.Component {
           </div> :
           <div>
             <div className="row even-space">
-              <button className={prevButton} onClick={this.prevItem.bind(this)}>prev</button>
+              <button className={prevButton} onClick={this.prevItem.bind(this)}>previous</button>
               <h2> Who Is Cody Douglass?</h2>
               <button className={nextButton} onClick={this.nextItem.bind(this)}>next</button>
             </div>
