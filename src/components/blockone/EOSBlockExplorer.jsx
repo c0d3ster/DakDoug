@@ -27,6 +27,13 @@ export default class EOSBlockExplorer extends React.Component {
           mostRecentBlock: block
         });
       });
+    })
+    .catch((err) => {
+      alert(err.message); //would usually implement custom error handler sliding into view on top, bottom, or near the button
+      this.setState({ //bring button back into view and reset block to empty object
+        loading: false,
+        mostRecentBlock: {}
+      });
     });
   }
 
@@ -36,9 +43,9 @@ export default class EOSBlockExplorer extends React.Component {
 
   render() {
     return(
-      <Section contentClass="eos-section-content-container" background="./EOS.jpg" title="Block One" navList={["EOS", "Steem", "Contact"]}>
+      <Section contentClass="pushed-section-content-container" background="./EOS.jpg" title="Block One" navList={["EOS", "Steem", "Contact"]}>
         { /* everything is rendered in a flex grid I created except this absolutely positioned button logic */
-        this.state.loading ? <div className="loader right-absolute"></div> : <button className="retreive-block-button right-absolute" onClick={this.retreiveBlock.bind(this)}>Retreive Most Recent Block</button>}
+        this.state.loading ? <div className="loader right-third-absolute"></div> : <button className="retreive-block-button right-third-absolute" onClick={this.retreiveBlock.bind(this)}>Retreive Most Recent Block</button>}
         <div className="row">
           <h2 className="col center">EOS Block Explorer</h2>
         </div>
