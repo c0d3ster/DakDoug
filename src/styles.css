@@ -22,6 +22,11 @@ button {
   border: 4px solid rgb(25,25,25);
   border-radius: 15px;
   background: radial-gradient(rgba(0,0,0,.9), rgba(0,0,0,.75), rgba(0,0,0,.25));
+  transition: border .25s;
+}
+
+button:hover {
+  border: 4px solid rgb(50,50,50);
 }
 
 button:disabled {
@@ -319,7 +324,7 @@ fills the parallax container background */
   background-position: center;
   background-size: cover;
   opacity: .5;
-  filter: blur(2px) grayscale(75%);
+  filter: blur(2px) grayscale(70%);
   transition: opacity 1s;
   border-radius: 3px;
 }
@@ -344,18 +349,6 @@ fills the parallax container background */
   font-style: normal;
 }
 
-.project-employer-button {
-  position: absolute;
-  top: -10vh;
-  left: 66vw;
-  padding: 3vh 3vw;
-  border: 4px solid rgb(25,25,25);
-  border-radius: 15px;
-  background: radial-gradient(rgba(0,0,0,.9), rgba(0,0,0,.75), rgba(0,0,0,.25));
-  color: white;
-  text-decoration: none;
-}
-
 /********** Block One Assignment Styles **********/
 
 /* Custom container class to push content down from header */
@@ -376,7 +369,7 @@ fills the parallax container background */
   max-width: 20vw;
 }
 
-/* This is a modifier which positions an element in the top right third */
+/* This is a modifier which positions an element in the top right third of the parent*/
 .right-third-absolute {
   position: absolute;
   top: 0;
