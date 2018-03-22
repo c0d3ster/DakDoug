@@ -2,11 +2,11 @@ var webpack = require('webpack');
 var path = require('path');
 
 var BUILD_DIR = path.join(__dirname, 'public');
-var APP_DIR =  path.join(__dirname, 'src');
+var APP_DIR = path.join(__dirname, 'src');
 
-var config = {
+module.exports = {
   devtool: "source-map",
-  entry:  APP_DIR + '/index.jsx',
+  entry: APP_DIR + '/index.jsx',
   output: {
     devtoolLineToLine: true,
     sourceMapFilename: "./bundle.js.map",
@@ -19,27 +19,42 @@ var config = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        use: {loader: 'babel-loader', options: { presets: ['react', 'env'] }},
-        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['react', 'env', 'stage-2']
+          }
+        },
+        exclude: /node_modules/
       },
       {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          {loader: 'css-loader', options: { importLoaders : 1 } },
-          'postcss-loader'
+        test: /\.(css|less)$/,
+        use: [{
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1
+            }
+          },
+          {
+            loader: 'postcss-loader'
+          }
         ]
       },
       {
-        test: /\.json$/,
-        use: 'json-loader'
+        test: /\.(png|jpg)$/,
+        use: [{
+          loader: 'file-loader?name=[name].[ext]'
+        }]
       },
       {
-        test: /\.(png|jpg)$/,
-        use: 'file-loader?name=public/[name].[ext]'
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        use: [{
+          loader: 'url-loader?limit=100000'
+        }]
       }
     ]
   }
 };
-
-module.exports = config;

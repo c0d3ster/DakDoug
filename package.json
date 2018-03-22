@@ -6,33 +6,35 @@
   "license": "ISC",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel watch:server watch:build",
-    "watch:build": "webpack --watch",
-    "watch:server": "nodemon server.js"
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "start": "concurrently --kill-others \"npm run build\" \"node server.js\"",
+    "start-dev": "concurrently --kill-others \"npm run dev\" \"supervisor server.js\""
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "express": "^4.16.2",
-    "if-env": "^1.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
     "react-scroll-parallax": "^1.2.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "concurrently": "^3.5.1",
     "css-loader": "^0.28.9",
     "eosjs": "^6.1.6",
     "file-loader": "^1.1.6",
-    "nodemon": "^1.15.0",
-    "npm-run-all": "^4.1.2",
     "postcss-loader": "^2.1.0",
     "react-router-scroll-4": "^1.0.0-beta.1",
     "style-loader": "^0.19.1",
-    "webpack": "^3.10.0"
+    "supervisor": "^0.12.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^2.0.13"
   }
 }
