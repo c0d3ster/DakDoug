@@ -1,5 +1,4 @@
 import React from 'react';
-import Observed from 'react-observed';
 import classnames from 'classnames';
 import Section from './SectionContainer.jsx';
 import content from '../data/content';
@@ -51,7 +50,7 @@ export default class AboutMe extends React.Component {
             src="https://www.youtube.com/embed/fdzHO2bFIcc"
             frameBorder="0"
             allow="encrypted-media"
-            allowFullScreen>
+            allowFullScreen="allowFullScreen">
             </iframe>
           </div> :
           <div>

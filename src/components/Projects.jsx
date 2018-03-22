@@ -7,16 +7,16 @@ import { Link } from 'react-router-dom';
 export default class Projects extends React.Component {
   render() {
     let navList = ["Projects", "Gallery", "Contact"];
-    let projectBackgroundList = ["./Ballz.png", "./Q.png", "./TheHokieForum.png"];
-    let projectTitleList = ["BALLZ", "CollabQ", "The Hokie Forum"];
+    let projectBackgroundList = ["./BlockOne.jpg", "./Q.png", "./TheHokieForum.png"];
+    let projectTitleList = ["Block One", "CollabQ", "The Hokie Forum"];
+    let projectLinkList = ["/blockone", "https://ec2-54-200-6-228.us-west-2.compute.amazonaws.com/", "https://github.com/c0d3ster/The-Hokie-Forum"];
     return (
       <Section background="./Mountain.jpg" title="c0d3ster" navList={navList}>
-        <Link to='/blockone' className="project-employer-button">Potential Employers -> </Link>
         <div className="row">
           <h2 className="col center">Projects</h2>
         </div>
         <div className="row">
-        {projectBackgroundList.map((background, index) => <ProjectBox background={background} key={index} count={index+1} title={projectTitleList[index]}/>)}
+        {projectBackgroundList.map((background, index) => <ProjectBox background={background} key={index} count={index+1} link={projectLinkList[index]} title={projectTitleList[index]}/>)}
         </div>
       </Section>
     );
