@@ -44,7 +44,7 @@ export default class EOSBlockExplorer extends React.Component {
 
   render() {
     return(
-      <Section contentClass='pushed-section-content-container' background='./EOS.jpg' title='Block One' navList={['EOS', 'Steem', 'Contact']}>
+      <Section name='EOS' contentClass='pushed-section-content-container' background='./EOS.jpg' title='Block One' navList={['EOS', 'Steem', 'Contact']}>
         { /* everything is rendered in a flex grid I created except this absolutely positioned button logic */
         this.state.loading ? <div className='loader right-third-absolute'></div> : <button className='retreive-block-button right-third-absolute' onClick={this.retreiveBlock.bind(this)}>Retreive Most Recent Block</button>}
         <div className='row'>

@@ -15,7 +15,7 @@ export default class Projects extends React.Component {
     let projectLinkList = ['/blockone', 'https://ec2-54-200-6-228.us-west-2.compute.amazonaws.com/', 'https://github.com/c0d3ster/The-Hokie-Forum'];
 
     return (
-      <Section background='./Mountain.jpg' title='c0d3ster' navList={navList} iconList={iconList}>
+      <Section name='Projects' background='./Mountain.jpg' title='c0d3ster' navList={navList} iconList={iconList}>
         <div className='row'>
           <h2 className='col center'>Projects</h2>
         </div>

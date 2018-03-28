@@ -3,10 +3,10 @@ import classnames from 'classnames';
 
 import Header from '../Header.jsx';
 
-const SectionContainer = ({ background, title, navList, iconList, contentClass, children }) => {
+const SectionContainer = ({ name, background, title, navList, iconList, contentClass, children }) => {
   let contentClasses = classnames('section-content-container', contentClass);
   return (
-    <div className='section-container'>
+    <div className='section-container' id={name}>
       <div
         className='section-background'
         style={{ backgroundImage: background.match(/\.(png|jpg)$/) ? `url(${background})`: `${background}` }}

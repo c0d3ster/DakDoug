@@ -9,7 +9,7 @@ export default class Leadership extends React.Component {
     let iconList = ['Resume', 'LinkedIn'];
 
     return (
-      <Section background="./FadedFire.jpg" title="Dakota Douglass" navList={navList} iconList={iconList}>
+      <Section name='Leadership' background="./FadedFire.jpg" title="Dakota Douglass" navList={navList} iconList={iconList}>
         <div className="row">
           <h2 className="col center">Leadership Development</h2>
         </div>

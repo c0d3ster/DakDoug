@@ -1,7 +1,7 @@
 /********** Overall Styles **********/
 html {
-  font-size: 26px;
-  line-height: 1.4;
+  font-size: 1.5vw;
+  line-height: 1.5;
 }
 
 body {
@@ -125,7 +125,7 @@ fills the parallax container background */
   padding-left: 3vw;
   opacity: .33;
   letter-spacing: 3px;
-  font-size: 3em;
+  font-size: 5vw;
   font-weight: bolder;
 }
 
@@ -136,11 +136,12 @@ fills the parallax container background */
 }
 
 .landing-text {
+  margin: 0;
+  padding: 9vh 0;
   opacity: .75;
+  font-size: 2vw;
   font-weight: bold;
   letter-spacing: 2px;
-  padding: 9vh 0;
-  margin: 0;
 }
 
 .twiddle {
@@ -212,6 +213,7 @@ fills the parallax container background */
   float: left;
   font-style: italic;
   transform: skewY(10deg);
+  cursor: pointer;
 }
 .header-item--1 {
   opacity: .9;

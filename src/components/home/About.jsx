@@ -25,7 +25,7 @@ export default class AboutMe extends React.Component {
     this.setState({ count : this.state.count - 1});
   }
   render() {
-    let navList = ['About Me', 'Leadership', 'Projects', 'Gallery', 'Contact'];
+    let navList = ['About', 'Leadership', 'Projects', 'Gallery', 'Contact'];
     let iconList = ['Resume', 'LinkedIn', 'Facebook', 'Instagram'];
 
     let contentList = ['who', 'childhood', 'teenage', 'college'];
@@ -40,7 +40,7 @@ export default class AboutMe extends React.Component {
     });
 
     return (
-      <Section background={backgroundList[this.state.count]} title='Cody Douglass' navList={navList} iconList={iconList} contentClass='about-content-container'>
+      <Section name='About' background={backgroundList[this.state.count]}  title='Cody Douglass' navList={navList} iconList={iconList} contentClass='about-content-container'>
         <div className='row center'>
           <div className='col'>
             <label className='about-type-text'>Intro Type:</label>

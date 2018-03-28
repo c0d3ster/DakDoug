@@ -9,7 +9,7 @@ export default class Gallery extends React.Component {
     let iconList = ['GoogleDrive', 'Instagram'];
 
     return (
-      <Section background='./Horizon.jpg' title='DakDoug' navList={navList} iconList={iconList}>
+      <Section name='Gallery' background='./Horizon.jpg' title='DakDoug' navList={navList} iconList={iconList}>
         <div className='row'>
           <h2 className='col center'>Gallery</h2>
         </div>
