@@ -178,6 +178,24 @@ fills the parallax container background */
   letter-spacing: 2px;
 }
 
+.header-icon-bar {
+  position: absolute;
+  top: 3vh;
+  left: 28vw;
+}
+
+.icon-container {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.icon-container > a > img {
+  cursor: pointer;
+  width: 3vw;
+  height: auto;
+  opacity: .8;
+}
+
 .header-nav {
   position: absolute;
   top: 22vh;

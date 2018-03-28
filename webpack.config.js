@@ -5,11 +5,11 @@ var BUILD_DIR = path.join(__dirname, 'public');
 var APP_DIR = path.join(__dirname, 'src');
 
 module.exports = {
-  devtool: "source-map",
+  devtool: 'source-map',
   entry: APP_DIR + '/index.jsx',
   output: {
     devtoolLineToLine: true,
-    sourceMapFilename: "./bundle.js.map",
+    sourceMapFilename: './bundle.js.map',
     pathinfo: true,
     path: BUILD_DIR,
     filename: 'bundle.js',
