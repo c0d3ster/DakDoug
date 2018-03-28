@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Landing from './LandingContainer.jsx';
+import HomeLanding from './HomeLanding.jsx';
 import AboutMe from './AboutMe.jsx';
 import Leadership from './Leadership.jsx';
 import Projects from './Projects.jsx';
@@ -10,7 +10,7 @@ import Footer from './Footer.jsx';
 
 const Home = () => (
   <div>
-    <Landing/>
+    <HomeLanding/>
     <AboutMe/>
     <Leadership/>
     <Projects/>
