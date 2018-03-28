@@ -5,10 +5,10 @@ import AboutMe from './AboutMe.jsx';
 import Leadership from './Leadership.jsx';
 import Projects from './Projects.jsx';
 import Gallery from './Gallery.jsx';
-import Footer from './Footer.jsx';
+import Footer from '../Footer.jsx';
 
 
-const Home = () => (
+const HomePage = () => (
   <div>
     <HomeLanding/>
     <AboutMe/>
@@ -19,4 +19,4 @@ const Home = () => (
   </div>
 );
 
-export default Home;
+export default HomePage;

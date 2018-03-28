@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ParallaxBackground from './ParallaxBackground.jsx';
+import ParallaxBackground from '../ParallaxBackground.jsx';
 
 const LandingContainer = ({background, contentClass, children}) => (
   <div className='landing-container'>

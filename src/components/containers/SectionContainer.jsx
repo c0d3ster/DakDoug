@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 
-import Header from './Header.jsx';
+import Header from '../Header.jsx';
 
 const SectionContainer = ({ background, title, navList, iconList, contentClass, children }) => {
   let contentClasses = classnames('section-content-container', contentClass);

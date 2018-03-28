@@ -1,8 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
 
-import Section from './SectionContainer.jsx';
-import content from '../data/content';
+import Section from '../containers/SectionContainer.jsx';
+import content from '../../data/content';
 
 export default class AboutMe extends React.Component {
   constructor(props) {

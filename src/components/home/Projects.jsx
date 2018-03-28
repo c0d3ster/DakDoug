@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Section from './SectionContainer.jsx';
+import Section from '../containers/SectionContainer.jsx';
 import ProjectBox from './ProjectBox.jsx';
 import { Link } from 'react-router-dom';
 

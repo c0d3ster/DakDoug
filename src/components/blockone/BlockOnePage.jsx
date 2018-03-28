@@ -6,7 +6,7 @@ import SteemItCondenser from './SteemItCondenser.jsx';
 import Footer from '../Footer.jsx';
 
 /* Create functional stateless components whenever possible, the BlockOne component shouldn't need to manage the child components' states */
-const BlockOne = () => (
+const BlockOnePage = () => (
   <div>
     <BlockOneLanding/>
     <EOSBlockExplorer/>
@@ -15,4 +15,4 @@ const BlockOne = () => (
   </div>
 );
 
-export default BlockOne;
+export default BlockOnePage;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Eos from 'eosjs';
 
-import Section from '../SectionContainer.jsx';
+import Section from '../containers/SectionContainer.jsx';
 
 /* This component uses es6 class syntax so that it can maintain a loading state and keep track of the mostRecentBlock recorded, currently directlyl pulling from Eos testnet in browser */
 export default class EOSBlockExplorer extends React.Component {

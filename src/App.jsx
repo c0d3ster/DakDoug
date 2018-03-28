@@ -4,19 +4,19 @@ import { ScrollContext } from 'react-router-scroll-4';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 import styles from './styles.css';
-import Home from './components/Home.jsx';
+import HomePage from './components/home/HomePage.jsx';
 import NotFoundPage from './components/NotFoundPage.jsx';
-import BlockOne from './components/blockone/BlockOne.jsx'
+import BlockOnePage from './components/blockone/BlockOnePage.jsx'
 
 export default class App extends React.Component {
   render() {
     return (
       <ParallaxProvider>
-        <Router onUpdate={() => window.scrollTo(0, 0)}>
+        <Router>
           <ScrollContext>
             <Switch>
-              <Route exact path='/' component={Home}/>
-              <Route exact path='/blockone' component={BlockOne}/>
+              <Route exact path='/' component={HomePage}/>
+              <Route exact path='/blockone' component={BlockOnePage}/>
               <Route path='*' component={NotFoundPage}/>
             </Switch>
           </ScrollContext>

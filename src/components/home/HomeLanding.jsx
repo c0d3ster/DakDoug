@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Landing from './LandingContainer.jsx';
+import Landing from '../containers/LandingContainer.jsx';
 
 //https://greensock.com/docs/Plugins/ScrollToPlugin
 const HomeLanding = () => (

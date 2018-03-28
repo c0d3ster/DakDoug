@@ -1,7 +1,7 @@
 import React from 'react';
 import { Parallax } from 'react-scroll-parallax';
 
-import Landing from '../LandingContainer.jsx';
+import Landing from '../containers/LandingContainer.jsx';
 
 const BlockOneLanding = () => (
   <Landing background='BlockOneLanding.png' contentClass='block-one-landing-content row'>
