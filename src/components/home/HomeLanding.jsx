@@ -1,22 +1,27 @@
 import React from 'react';
+import { Link as ScrollLink } from 'react-scroll';
 
 import Landing from '../containers/LandingContainer.jsx';
 
-//https://greensock.com/docs/Plugins/ScrollToPlugin
-const HomeLanding = () => (
-  <Landing background='KingsCanyonAstro.jpg' contentClass='landing-content'>
-    <div className='row'>
-      <p className='landing-text col'>Developer</p>
-      <p className='landing-text col'>Photographer</p>
-    </div>
-    <div className='row'>
-      <h1 className='landing-title col'>Dakota Douglass</h1>
-    </div>
-    <div className='row'>
-      <p className='landing-text col center'>Inventor</p>
-      <p className='landing-text col center'>Explorer</p>
-    </div>
-  </Landing>
-);
+const HomeLanding = () => {
+  let scrollOffset = document.documentElement.clientHeight * .3; //dynamic offset TODO if I want to handle resize events I need to import lodash for _.debounce
+  return (
+    <Landing background='KingsCanyonAstro.jpg' contentClass='landing-content'>
+      <div className='row'>
+        <ScrollLink className='landing-text col' to='Projects' offset={scrollOffset} smooth='easeOutCubic'>Developer</ScrollLink>
+        <ScrollLink className='landing-text col' to='Gallery' offset={scrollOffset} smooth='easeOutCubic'>Photographer</ScrollLink>
+      </div>
+      <div className='row'>
+        <ScrollLink className='landing-title col' to='About' offset={scrollOffset} smooth='easeOutCubic'>Dakota Douglass</ScrollLink>
+      </div>
+      <div className='row'>
+        <ScrollLink className='landing-text col center' to='About' offset={scrollOffset} smooth='easeOutCubic'>Explorer</ScrollLink>
+        {//TODO do something cool when user clicks Explorer instead of navigating to about section
+        }
+        <ScrollLink className='landing-text col center' to='Leadership' offset={scrollOffset} smooth='easeOutCubic'>Leader</ScrollLink>
+      </div>
+    </Landing>
+  );
+}
 
 export default HomeLanding;

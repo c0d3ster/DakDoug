@@ -4,7 +4,7 @@ import { Link as ScrollLink } from 'react-scroll'
 import Icon from './Icon.jsx';
 
 const Header = ({ title, navList, iconList }) => {
-  let scrollOffset = document.documentElement.clientHeight * .3; //dynamic offset, does not update on window resize, so anchors will be incorrect
+  let scrollOffset = document.documentElement.clientHeight * .3; //dynamic offset TODO if I want to handle resize events I need to import lodash for _.debounce
   return (
     <div className='header-container'>
       <h2 className='header-title'>{title}</h2>

@@ -13,6 +13,10 @@ body {
   font-weight: normal;
 }
 
+a {
+  cursor: pointer;
+}
+
 button {
   color: white;
   cursor: pointer;
@@ -213,7 +217,6 @@ fills the parallax container background */
   float: left;
   font-style: italic;
   transform: skewY(10deg);
-  cursor: pointer;
 }
 .header-item--1 {
   opacity: .9;
