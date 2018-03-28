@@ -6,7 +6,6 @@ const Header = ({ title, navList, iconList }) => (
   <div className='header-container'>
     <h2 className='header-title'>{title}</h2>
     <div className='header-icon-bar'>
-      {console.log(iconList)}
       {iconList && iconList.map((iconName, key) => <Icon key={key} name={iconName}/>)}
     </div>
     <ul className='header-nav'>

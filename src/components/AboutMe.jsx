@@ -45,8 +45,8 @@ export default class AboutMe extends React.Component {
           <div className='col'>
             <label className='about-type-text'>Intro Type:</label>
             <label className='about-type-text'>Text</label><input type='radio' name='intro' id='text'
-            onChange={this.switchContent.bind(this)} checked={!this.state.video} />
-            <label className='about-type-text'>Video</label><input type='radio' name='intro' id='video' onChange={this.switchContent.bind(this)} checked={this.state.video}/>
+            onChange={this.switchContent.bind(this)} checked={!this.state.displayVideo} />
+          <label className='about-type-text'>Video</label><input type='radio' name='intro' id='video' onChange={this.switchContent.bind(this)} checked={this.state.displayVideo}/>
           </div>
         </div>
         {this.state.displayVideo
