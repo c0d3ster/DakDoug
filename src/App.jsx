@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import { ScrollContext } from 'react-router-scroll-4';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
-import styles from './styles.css';
+import './styles/App.css';
 import HomePage from './components/home/HomePage.jsx';
 import NotFoundPage from './components/NotFoundPage.jsx';
 import BlockOnePage from './components/blockone/BlockOnePage.jsx'

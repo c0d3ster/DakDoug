@@ -40,7 +40,7 @@ export default class AboutMe extends React.Component {
     });
 
     return (
-      <Section name='About' background={backgroundList[this.state.count]}  title='Cody Douglass' navList={navList} iconList={iconList} contentClass='about-content-container'>
+      <Section name='About' background={backgroundList[this.state.count]}  title='Cody Douglass' navList={navList} iconList={iconList} contentClass='pushed-section-content-container'>
         <div className='row center'>
           <div className='col'>
             <label className='about-type-text'>Intro Type:</label>

@@ -1,0 +1,91 @@
+.header-container {
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  height: 30vh;
+  top: 0;
+  left: 0;
+  clip-path: polygon(
+    0 0,
+    100vw 0,
+    0 30vh
+  );
+  background: linear-gradient(175deg, rgba(0,0,0,1), rgba(10,10,10,.92), rgba(0,0,0,.1));
+}
+
+.header-title {
+  position: absolute;
+  top: 3vh;
+  left: 5vw;
+  width: 35vw;
+  margin: 0;
+  padding: 0;
+  transform: skewY(4deg);
+  transform-origin: left bottom 0;
+  font-size: 1.66em;
+  letter-spacing: 2px;
+}
+
+.header-icon-bar {
+  position: absolute;
+  top: 2vh;
+  left: 28vw;
+}
+
+.icon-container {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.icon-container > a > img {
+  cursor: pointer;
+  width: 3vw;
+  height: auto;
+  opacity: .8;
+}
+
+.header-nav {
+  position: absolute;
+  top: 18vh;
+  left: 4vw;
+  width: 98vw;
+  margin: 0;
+  padding: 0;
+  transform-origin: left top 0;
+  transform: rotate(-5deg);
+  list-style-type: none;
+}
+
+.header-item {
+  display: inline;
+  float: left;
+  font-style: italic;
+  transform: skewY(10deg);
+}
+.header-item--1 {
+  opacity: .9;
+  margin-right: 16vw;
+  font-size: 1.35em;
+}
+.header-item--2 {
+  opacity: .6;
+  margin-right: 12vw;
+  font-size: .85em;
+}
+.header-item--3 {
+  opacity: .45;
+  margin-right: 8vw;
+  font-size: .65em;
+}
+.header-item--4 {
+  opacity: .3;
+  margin-right: 6vw;
+  font-size: .45em;
+}
+.header-item--5 {
+  opacity: .2;
+  margin-right: 4vw;
+  font-size: .25em;
+}
+
+/*** Add fade-in and fade-out styles for header transitions ***/

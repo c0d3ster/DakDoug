@@ -1,0 +1,29 @@
+/********** Home Route Landing Styles **********/
+
+.landing-title {
+  margin: 0;
+  padding-left: 3vw;
+  opacity: .33;
+  letter-spacing: 3px;
+  font-size: 5vw;
+  font-weight: bolder;
+}
+
+.landing-content {
+  margin: 0 auto;
+  padding-left: 15vw;
+  width: 60vw;
+}
+
+.landing-text {
+  margin: 0;
+  padding: 9vh 0;
+  opacity: .75;
+  font-size: 2vw;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.twiddle {
+
+}

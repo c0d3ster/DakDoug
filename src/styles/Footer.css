@@ -1,0 +1,35 @@
+.footer-container {
+  display: flex;
+  width: 100%;
+  margin-top: -29vh;
+  height: 30vh;
+  clip-path: polygon(
+    0 30vh,
+    100vw 0,
+    100vw 30vh,
+    0 30vh
+  );
+  background: linear-gradient(175deg, rgba(0,0,0,.1), rgba(10,10,10,.92), rgba(0,0,0,1));
+  justify-content: flex-end;
+  flex-flow: flex-end;
+}
+
+.footer-content {
+  align-self: center;
+  text-align: right;
+  padding: 0 4vw 4vh 0;
+}
+
+.footer-contact {
+  transform: skewY(4deg);
+  transform-origin: left bottom 0;
+  font-size: 1.6em;
+  letter-spacing: 2px;
+  margin: 20px;
+}
+
+.footer-item {
+  transform: skewY(4deg);
+  transform-origin: left bottom 0;
+  margin: 5px;
+}

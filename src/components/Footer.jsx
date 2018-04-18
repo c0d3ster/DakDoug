@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../styles/Footer.css';
+
 const Footer = () => (
   <div className='footer-container' id='Contact'>
     <div className='footer-content'>

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import '../../styles/BlockOne.css';
 import BlockOneLanding from './BlockOneLanding.jsx';
 import EOSBlockExplorer from './EOSBlockExplorer.jsx';
 import SteemItCondenser from './SteemItCondenser.jsx';

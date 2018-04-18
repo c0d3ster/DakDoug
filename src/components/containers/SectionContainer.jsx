@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 
+import '../../styles/Section.css';
 import Header from '../Header.jsx';
 
 const SectionContainer = ({ name, background, title, navList, iconList, contentClass, children }) => {

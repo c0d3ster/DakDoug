@@ -1,5 +1,6 @@
 import React from 'react';
 
+import '../../styles/Home.css';
 import HomeLanding from './HomeLanding.jsx';
 import About from './About.jsx';
 import Leadership from './Leadership.jsx';

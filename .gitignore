@@ -1,4 +1,12 @@
+# Dependency Directory
 node_modules/
-*.pem
+
+# Bundles built by Webpack need not be committed
 public/bundle.js*
+
+# Certificate files for HTTPS
+*.pem
 ssl/
+
+# In Case iOS makes these extra files, ignore them
+.DS_Store
