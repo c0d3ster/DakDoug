@@ -29,10 +29,7 @@ export default class AboutMe extends React.Component {
     let navList = ['About', 'Leadership', 'Projects', 'Gallery', 'Contact'];
     let iconList = ['Resume', 'LinkedIn', 'Facebook', 'Instagram'];
 
-    let contentList = ['who', 'childhood', 'teenage', 'college'];
-    let backgroundList = ['VirginiaBeachSnowySunrise.jpg','VirginiaBeach.jpg', 'OceanLakes.jpg', 'Blacksburg.jpg'];
-
-    let currItem = contentList[this.state.count];
+    let currItem = content.about[this.state.count]; //content.about is an array of items with description and background
     let prevButton = classnames('about-prev-button', {
       'hidden': (this.state.count == 0) || this.state.displayVideo
     });
@@ -41,7 +38,7 @@ export default class AboutMe extends React.Component {
     });
 
     return (
-      <Section name='About' background={backgroundList[this.state.count]}  title='Cody Douglass' navList={navList} iconList={iconList} contentClass='pushed-section-content-container'>
+      <Section name='About' background={currItem.background}  title='Cody Douglass' navList={navList} iconList={iconList} contentClass='pushed-section-content-container'>
         <div className='row center'>
           <div className='col'>
             <label className='about-type-text'>Intro Type:</label>
@@ -66,7 +63,7 @@ export default class AboutMe extends React.Component {
                 <button className={nextButton} onClick={this.nextItem}>next</button>
               </div>
               <div className='row'>
-                <p className='col'>{content.about[currItem]}</p>
+                <p className='col'>{currItem.description}</p>
               </div>
             </div>
         }
