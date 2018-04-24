@@ -8,10 +8,10 @@ import Projects from './Projects.jsx';
 import Gallery from './Gallery.jsx';
 import Footer from '../Footer.jsx';
 
-
-const HomePage = () => (
+//need to hide HomeLanding when the video goes to fullscreen because it is a descendent of About
+const HomePage = ({isFullscreen}) => (
   <div>
-    <HomeLanding/>
+    {!isFullscreen && <HomeLanding/>}
     <About/>
     <Leadership/>
     <Projects/>

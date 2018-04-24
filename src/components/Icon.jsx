@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
-import links from '../data/links.js';
+import links from '../data/Links.json';
 
 const Icon = ({name, tip}) => {
   let tooltipInfo = tip || `View My ${name}`;

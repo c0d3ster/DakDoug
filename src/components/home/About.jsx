@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 
 import Section from '../containers/SectionContainer.jsx';
-import content from '../../data/content';
+import content from '../../data/Home.json';
 
 export default class AboutMe extends React.Component {
   constructor(props) {
@@ -13,17 +13,18 @@ export default class AboutMe extends React.Component {
       };
   }
 
-  switchContent() {
+  switchContent = () => {
     this.setState({displayVideo: !this.state.displayVideo});
   }
 
-  nextItem() {
+  nextItem = () => {
     this.setState({ count : this.state.count + 1});
   }
 
-  prevItem() {
+  prevItem = () => {
     this.setState({ count : this.state.count - 1});
   }
+
   render() {
     let navList = ['About', 'Leadership', 'Projects', 'Gallery', 'Contact'];
     let iconList = ['Resume', 'LinkedIn', 'Facebook', 'Instagram'];
@@ -45,8 +46,8 @@ export default class AboutMe extends React.Component {
           <div className='col'>
             <label className='about-type-text'>Intro Type:</label>
             <label className='about-type-text'>Text</label><input type='radio' name='intro' id='text'
-            onChange={this.switchContent.bind(this)} checked={!this.state.displayVideo} />
-          <label className='about-type-text'>Video</label><input type='radio' name='intro' id='video' onChange={this.switchContent.bind(this)} checked={this.state.displayVideo}/>
+            onChange={this.switchContent} checked={!this.state.displayVideo} />
+          <label className='about-type-text'>Video</label><input type='radio' name='intro' id='video' onChange={this.switchContent} checked={this.state.displayVideo}/>
           </div>
         </div>
         {this.state.displayVideo
@@ -60,9 +61,9 @@ export default class AboutMe extends React.Component {
             </div>
           : <div>
               <div className='row even-space'>
-                <button className={prevButton} onClick={this.prevItem.bind(this)}>previous</button>
+                <button className={prevButton} onClick={this.prevItem}>previous</button>
                 <h2> Who Is Cody Douglass?</h2>
-                <button className={nextButton} onClick={this.nextItem.bind(this)}>next</button>
+                <button className={nextButton} onClick={this.nextItem}>next</button>
               </div>
               <div className='row'>
                 <p className='col'>{content.about[currItem]}</p>
