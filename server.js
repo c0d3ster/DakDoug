@@ -5,7 +5,7 @@ const path = require('path');
 const app = express();
 
 const DIST_DIR = path.join(__dirname, 'public/');
-const SSL_DIR = path.join(__dirname, 'ssl/live/www.dakdoug.com/');
+const SSL_DIR = ('/etc/letsencrypt/live/dakdoug.com');
 const PORT = 443;
 
 const options = {
