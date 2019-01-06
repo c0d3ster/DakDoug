@@ -34,7 +34,7 @@ export default class AboutMe extends React.Component {
       'hidden': (this.state.count == 0) || this.state.displayVideo
     });
     let nextButton = classnames('about-next-button', {
-      'hidden': (this.state.count == contentList.length-1) || this.state.displayVideo
+      'hidden': (this.state.count == content.about.length-1) || this.state.displayVideo
     });
 
     return (

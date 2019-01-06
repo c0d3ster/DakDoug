@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Block One",
+    "link": "/blockone",
+    "background": "./BlockOne.jpg"
+  },
+  {
+    "title": "Fractaleyez",
+    "link": "https://fractaleyez.com",
+    "background": "./Fractaleyez.png"
+  },
+  {
+    "title": "The Hokie Forum",
+    "link": "https://github.com/c0d3ster/The-Hokie-Forum",
+    "background": "./TheHokieForum.png"
+  }
+]
