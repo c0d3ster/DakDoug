@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Block One",
+    "link": "/blockone",
+    "background": "./BlockOne.jpg"
+  },
+  {
+    "title": "Fractaleyez",
+    "link": "https://fractaleyez.com",
+    "background": "./Fractaleyez.jpg"
+  },
+  {
+    "title": "Maptivity",
+    "link": "https://github.com/oconorr3/Maptivity",
+    "background": "./Maptivity.png"
+  }
+]

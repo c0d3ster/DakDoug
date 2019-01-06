@@ -9,7 +9,7 @@
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
     "start": "concurrently --kill-others \"npm run build\" \"node server.js\"",
-    "start-dev": "concurrently --kill-others \"npm run dev\" \"supervisor server.js\""
+    "start-dev": "concurrently --kill-others \"npm run dev\" \"webpack-dev-server --content-base public\""
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -37,6 +37,7 @@
     "supervisor": "^0.12.0",
     "url-loader": "^1.0.1",
     "webpack": "^4.2.0",
-    "webpack-cli": "^2.0.13"
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.14"
   }
 }

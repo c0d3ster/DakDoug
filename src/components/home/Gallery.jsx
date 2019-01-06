@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Section from '../containers/SectionContainer.jsx';
-import links from '../../data/links';
+import links from '../../data/Links';
 
 export default class Gallery extends React.Component {
   render() {
