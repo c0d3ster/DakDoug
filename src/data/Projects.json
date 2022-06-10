@@ -2,7 +2,7 @@
   {
     "title": "Voice",
     "link": "https://voice.com/dakdoug",
-    "background": "./voice.png"
+    "background": "./Voice.png"
   },
   {
     "title": "Fractaleyez",
@@ -10,8 +10,8 @@
     "background": "./Fractaleyez.jpg"
   },
   {
-    "title": "Maptivity",
-    "link": "https://github.com/oconorr3/Maptivity",
-    "background": "./Maptivity.png"
+    "title": "Bassyndicate",
+    "link": "linktr.ee/bassyndicate",
+    "background": "./Bassyndicate.jpg"
   }
 ]
