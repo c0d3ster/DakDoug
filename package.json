@@ -5,11 +5,13 @@
   "author": "DakDoug",
   "license": "ISC",
   "main": "index.js",
+  "homepage": "http://c0d3ster.github.io/dakdoug",
   "scripts": {
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
     "start": "npm run build && node server.js",
     "start-dev": "concurrently --kill-others \"npm run dev\" \"webpack serve --content-base public\"",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d public"
   },
   "dependencies": {
