@@ -1890,7 +1890,7 @@ object-assign
   \********************************/
 /*! exports provided: 0, 1, 2, default */
 /*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(t){t.exports=JSON.parse('[{"title":"Voice","link":"https://voice.com/dakdoug","background":"./voice.png"},{"title":"Fractaleyez","link":"https://fractaleyez.com","background":"./Fractaleyez.jpg"},{"title":"Maptivity","link":"https://github.com/oconorr3/Maptivity","background":"./Maptivity.png"}]')},
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(t){t.exports=JSON.parse('[{"title":"Voice","link":"https://voice.com/dakdoug","background":"./Voice.png"},{"title":"Fractaleyez","link":"https://fractaleyez.com","background":"./Fractaleyez.jpg"},{"title":"Bassyndicate","link":"linktr.ee/bassyndicate","background":"./Bassyndicate.jpg"}]')},
 /*!*****************************************!*\
   !*** ./src/components/home/Gallery.jsx ***!
   \*****************************************/
