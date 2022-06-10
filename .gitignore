@@ -10,3 +10,5 @@ ssl/
 
 # In Case iOS makes these extra files, ignore them
 .DS_Store
+
+yarn-error.log
