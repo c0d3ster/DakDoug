@@ -5,7 +5,7 @@
   "author": "DakDoug",
   "license": "ISC",
   "main": "index.js",
-  "homepage": "http://c0d3ster.github.io/dakdoug",
+  "homepage": "https://dakdoug.com",
   "scripts": {
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
