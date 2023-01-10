@@ -7,7 +7,6 @@ import ReactGA from 'react-ga'
 import './styles/App.css'
 import HomePage from './components/home/HomePage.jsx'
 import NotFoundPage from './components/NotFoundPage.jsx'
-import BlockOnePage from './components/blockone/BlockOnePage.jsx'
 import { reactGaTrackingTag } from './settings'
 
 export default class App extends React.Component {
@@ -58,7 +57,6 @@ export default class App extends React.Component {
                   <HomePage isFullscreen={this.state.isFullscreen} />
                 )}
               />
-              <Route exact path='/blockone' component={BlockOnePage} />
               <Route path='*' component={NotFoundPage} />
             </Switch>
           </ScrollContext>
