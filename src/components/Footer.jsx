@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import '../styles/Footer.css';
+import '../styles/Footer.css'
 
 const Footer = () => (
   <div className='footer-container' id='Contact'>
@@ -12,4 +12,4 @@ const Footer = () => (
   </div>
 )
 
-export default Footer;
+export default Footer

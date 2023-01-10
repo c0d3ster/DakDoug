@@ -1,0 +1,1 @@
+export const reactGaTrackingTag='G-2317Y6R6DP'

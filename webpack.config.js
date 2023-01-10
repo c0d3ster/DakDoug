@@ -1,4 +1,3 @@
-var webpack = require('webpack');
 var path = require('path');
 
 var BUILD_DIR = path.join(__dirname, 'public');
@@ -56,5 +55,11 @@ module.exports = {
         }]
       }
     ]
+  },
+  devServer: {
+    port: 3000,
+    historyApiFallback: {
+      index: 'index.html'
+    }
   }
 };

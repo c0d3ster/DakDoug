@@ -1,0 +1,18 @@
+{
+  // Configuration for JavaScript files
+  "extends": [
+    "airbnb-base",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "endOfLine": "auto",
+        "semi": false
+      }
+    ]
+  }
+}
