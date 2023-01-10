@@ -2,11 +2,13 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { ScrollContext } from 'react-router-scroll-4'
 import { ParallaxProvider } from 'react-scroll-parallax'
+import ReactGA from 'react-ga'
 
 import './styles/App.css'
 import HomePage from './components/home/HomePage.jsx'
 import NotFoundPage from './components/NotFoundPage.jsx'
 import BlockOnePage from './components/blockone/BlockOnePage.jsx'
+import { reactGaTrackingTag } from './settings'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -17,6 +19,8 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
+    ReactGA.initialize(reactGaTrackingTag)
+    ReactGA.pageview(window.location.pathname)
     window.addEventListener('fullscreenchange', this.onFullScreenChange)
     window.addEventListener('webkitfullscreenchange', this.onFullScreenChange)
     window.addEventListener('mozfullscreenchange', this.onFullScreenChange)
