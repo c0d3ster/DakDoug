@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-import App from './App.jsx';
+import App from './App.jsx'
 
 window.onload = () => {
-  ReactDOM.render(<App />, document.getElementById('main'));
-};
+  ReactDOM.render(<App />, document.getElementById('main'))
+}

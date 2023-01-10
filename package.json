@@ -9,9 +9,11 @@
   "scripts": {
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
-    "start": "npm run build && node server.js",
-    "start-dev": "concurrently --kill-others \"npm run dev\" \"webpack serve --content-base public\"",
-    "predeploy": "npm run build",
+    "lint": "eslint",
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
+    "start": "yarn build && node server.js",
+    "start-dev": "concurrently --kill-others \"yarn dev\" \"webpack serve --content-base public\"",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d public"
   },
   "dependencies": {
@@ -32,10 +34,12 @@
     "babel-preset-stage-2": "^6.24.1",
     "concurrently": "^3.5.1",
     "css-loader": "^0.28.9",
-    "eosjs": "^6.1.6",
+    "eslint": "^8.31.0",
+    "eslint-plugin-react": "^7.31.11",
     "file-loader": "^1.1.6",
     "gh-pages": "^4.0.0",
     "postcss-loader": "^2.1.0",
+    "prettier": "^2.8.2",
     "react-router-scroll-4": "^1.0.0-beta.1",
     "style-loader": "^0.19.1",
     "supervisor": "^0.12.0",

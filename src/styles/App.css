@@ -1,6 +1,6 @@
 /********** Overall Styles **********/
 html {
-  font-size: 1.5vw;
+  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -22,7 +22,7 @@ button {
   cursor: pointer;
   opacity: .9;
   padding: 3vh 3vw;
-  font-size: .75em;
+  font-size: .75rem;
   border: 4px solid rgb(25,25,25);
   border-radius: 15px;
   background: radial-gradient(rgba(0,0,0,.9), rgba(0,0,0,.75), rgba(0,0,0,.25));
@@ -69,8 +69,8 @@ button:focus {
 }
 
 .loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+    border: 1rem solid #f3f3f3; /* Light grey */
+    border-top: 1rem solid #3498db; /* Blue */
     border-radius: 50%;
     width: 4vmax;
     height: 4vmax;
