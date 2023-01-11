@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Section from '../containers/SectionContainer.jsx'
+import Section from '../containers/SectionContainer'
 import content from '../../data/Home.json'
 
 export default class Leadership extends React.Component {

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link as ScrollLink } from 'react-scroll'
 
 import '../../styles/Landing.css'
-import Landing from '../containers/LandingContainer.jsx'
+import Landing from '../containers/LandingContainer'
 
 const HomeLanding = () => {
   let scrollOffset = document.documentElement.clientHeight * 0.28 //dynamic offset TODO if I want to handle resize events I need to import lodash for _.debounce

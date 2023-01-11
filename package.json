@@ -17,6 +17,7 @@
     "deploy": "gh-pages -d public"
   },
   "dependencies": {
+    "@types/react-router": "^5.1.20",
     "classnames": "^2.2.5",
     "express": "^4.18.2",
     "react": "^16.2.0",
@@ -25,7 +26,8 @@
     "react-router-dom": "^4.2.2",
     "react-scroll": "^1.7.7",
     "react-scroll-parallax": "^1.2.0",
-    "react-tooltip": "^3.4.0"
+    "react-tooltip": "^3.4.0",
+    "typescript": "^4.9.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

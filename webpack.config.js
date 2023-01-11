@@ -5,7 +5,7 @@ var APP_DIR = path.join(__dirname, 'src');
 
 module.exports = {
   devtool: 'source-map',
-  entry: APP_DIR + '/index.jsx',
+  entry: APP_DIR + '/index.tsx',
   output: {
     devtoolLineToLine: true,
     sourceMapFilename: './bundle.js.map',
@@ -17,7 +17,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(ts|tsx)$/,
         use: {
           loader: 'babel-loader',
           options: {

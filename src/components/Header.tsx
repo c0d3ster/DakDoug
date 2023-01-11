@@ -2,7 +2,7 @@ import React from 'react'
 import { Link as ScrollLink } from 'react-scroll'
 
 import '../styles/Header.css'
-import Icon from './Icon.jsx'
+import Icon from './Icon'
 
 const Header = ({ title, navList, iconList }) => {
   let scrollOffset = document.documentElement.clientHeight * 0.28 //dynamic offset TODO if I want to handle resize events I need to import lodash for _.debounce

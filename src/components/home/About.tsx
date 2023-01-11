@@ -1,7 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 
-import Section from '../containers/SectionContainer.jsx'
+import Section from '../containers/SectionContainer'
 import content from '../../data/Home.json'
 
 export default class AboutMe extends React.Component {

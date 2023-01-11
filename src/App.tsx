@@ -5,8 +5,8 @@ import { ParallaxProvider } from 'react-scroll-parallax'
 import ReactGA from 'react-ga'
 
 import './styles/App.css'
-import HomePage from './components/home/HomePage.jsx'
-import NotFoundPage from './components/NotFoundPage.jsx'
+import HomePage from './components/home/HomePage'
+import NotFoundPage from './components/NotFoundPage'
 import { reactGaTrackingTag } from './settings'
 
 export default class App extends React.Component {

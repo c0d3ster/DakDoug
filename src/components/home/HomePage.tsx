@@ -1,12 +1,12 @@
 import React from 'react'
 
 import '../../styles/Home.css'
-import HomeLanding from './HomeLanding.jsx'
-import About from './About.jsx'
-import Leadership from './Leadership.jsx'
-import Projects from './projects/Projects.jsx'
-import Gallery from './Gallery.jsx'
-import Footer from '../Footer.jsx'
+import HomeLanding from './HomeLanding'
+import About from './About'
+import Leadership from './Leadership'
+import Projects from './projects/Projects'
+import Gallery from './Gallery'
+import Footer from '../Footer'
 
 //need to hide HomeLanding when the video goes to fullscreen because it is a descendent of About
 const HomePage = ({ isFullscreen }) => (
