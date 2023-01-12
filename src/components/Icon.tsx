@@ -1,11 +1,16 @@
-import React from 'react'
-import ReactTooltip from 'react-tooltip'
+import { FC } from 'react'
+import { Tooltip } from 'react-tooltip'
 
-import links from '../data/Links.json'
+import { links } from '../data/Links'
 
-const Icon = ({ name, tip }) => {
+interface Props {
+  name: string
+  tip?: string
+}
+
+const Icon: FC<Props> = ({ name, tip }) => {
   let tooltipInfo = tip || `View My ${name}`
-  if (name == 'GoogleDrive') {
+  if (name == 'googleDrive') {
     tooltipInfo = `View My Google Drive Photos`
   }
 
@@ -14,7 +19,7 @@ const Icon = ({ name, tip }) => {
       <a href={links[name]} target='_blank'>
         <img src={`icons/${name}.png`} data-tip={tooltipInfo} data-for={name} />
       </a>
-      <ReactTooltip id={name} delayShow={500} place='bottom' />
+      <Tooltip id={name} delayShow={500} place='bottom' />
     </div>
   )
 }

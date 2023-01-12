@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 import classnames from 'classnames'
 
 import '../../styles/Section.css'
@@ -14,7 +14,7 @@ interface Props {
   contentClass?: string
 }
 
-const SectionContainer: React.FC<Props> = ({
+const SectionContainer: FC<Props> = ({
   name,
   background,
   title,

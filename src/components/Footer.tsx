@@ -1,8 +1,8 @@
-import React from 'react'
+import { FC } from 'react'
 
 import '../styles/Footer.css'
 
-const Footer = () => (
+const Footer: FC = () => (
   <div className='footer-container' id='Contact'>
     <div className='footer-content'>
       <h3 className='footer-contact'>Contact Me</h3>

@@ -1,12 +1,12 @@
-import React from 'react'
+import { FC } from 'react'
 
 import Section from '../../containers/SectionContainer'
 import ProjectBox from './ProjectBox'
 import ProjectData from '../../../data/Projects.json'
 
-const Projects: React.FC = () => {
+const Projects: FC = () => {
   const navList = ['Projects', 'Gallery', 'Contact']
-  const iconList = ['Resume', 'Github']
+  const iconList = ['resume', 'Github']
 
   return (
     <Section
