@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
 import { useIsFullscreen, useReactGA } from './hooks'
@@ -16,13 +16,13 @@ const App:FC = () => {
   return (
     <ParallaxProvider>
       <Router>
-          <Switch>
+          <Routes>
             <Route
               path='/'
               element={<HomePage isFullscreen={isFullscreen} />}
             />
             <Route path='*' element={<NotFoundPage />} />
-          </Switch>
+          </Routes>
       </Router>
     </ParallaxProvider>
   )

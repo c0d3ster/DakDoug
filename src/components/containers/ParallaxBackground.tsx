@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react'
 import { Parallax } from 'react-scroll-parallax'
 
-import '../styles/Parallax.css'
+import '../../styles/Parallax.css'
 
 interface Props {
   background: string

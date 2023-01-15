@@ -12,7 +12,7 @@ interface Props {
   isFullscreen: boolean
 }
 
-//need to hide HomeLanding when the video goes to fullscreen because it is a descendent of About
+// Need to hide HomeLanding when the video goes to fullscreen because it is a descendent of About
 const HomePage: FC<Props> = ({ isFullscreen }) => (
   <div>
     {!isFullscreen && <HomeLanding />}
