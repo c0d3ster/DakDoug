@@ -8,19 +8,19 @@ letter-spacing: 2px;
 
 .about-prev-button {
 min-width: 20rem;
-padding: 3vh 6rem;
+padding: 3rem 6rem;
 }
 
 .about-next-button {
 min-width: 20rem;
-padding: 3vh 6rem;
+padding: 3rem 6rem;
 }
 
 .about-video-container {
 position: relative;
 width: 60rem;
-height: 60vh;
-margin: 3vh auto;
+height: 60rem;
+margin: 3rem auto;
 }
 
 .about-video {
@@ -39,19 +39,19 @@ position: relative;
 cursor: pointer;
 text-align: center;
 background: rgb(25, 25, 25);
-height: 45vh;
+height: 45rem;
 margin: 0 2rem;
 border: 4px solid rgb(25,25,25);
 border-radius: 3px;
 }
 .project-box-container--1 {
-margin-bottom: -15vh;
+margin-bottom: -15rem;
 }
 .project-box-container--2 {
 margin: 0 2rem;
 }
 .project-box-container--3 {
-margin-top: -15vh;
+margin-top: -15rem;
 }
 
 .project-box-background {

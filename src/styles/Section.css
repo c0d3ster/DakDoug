@@ -1,19 +1,19 @@
 .section-container {
   position: relative;
   background: black;
-  height: 150vh;
-  margin-top: -29vh;
+  height: 150rem;
+  margin-top: -29rem;
   clip-path: polygon(
-    0 30vh,
-    100vw 0,
-    100vw 120vh,
-    0 150vh
+    0 30rem,
+    100rem 0,
+    100rem 120rem,
+    0 150rem
   );
 }
 
 .section-background {
   width: 100%;
-  height: 150vh;
+  height: 150rem;
   content: "";
   opacity: .25;
   z-index: -1;
@@ -23,12 +23,12 @@
 
 .section-content-container {
   position: absolute;
-  top: 46vh;
+  top: 46rem;
   width: 93rem;
   margin: 0 3rem;
 }
 
 /* Custom container class to push content down from header */
 .pushed-section-content-container {
-  top: 51vh;
+  top: 51rem;
 }

@@ -7,7 +7,7 @@ module.exports = {
   devtool: 'source-map',
   entry: APP_DIR + '/index.tsx',
   output: {
-    sourceMapFilename: './bundle.js.map',
+    sourceMapFilename: './[name].js.map',
     pathinfo: true,
     path: BUILD_DIR,
     filename: '[name].js',

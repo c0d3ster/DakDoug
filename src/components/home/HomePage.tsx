@@ -5,21 +5,14 @@ import HomeLanding from './HomeLanding'
 import About from './AboutMe'
 import Leadership from './Leadership'
 import Projects from './projects/Projects'
-import Gallery from './Gallery'
 import Footer from '../Footer'
 
-interface Props {
-  isFullscreen: boolean
-}
-
-// Need to hide HomeLanding when the video goes to fullscreen because it is a descendent of About
-const HomePage: FC<Props> = ({ isFullscreen }) => (
+const HomePage: FC = () => (
   <div>
-    {!isFullscreen && <HomeLanding />}
+    <HomeLanding />
     <About />
     <Leadership />
     <Projects />
-    <Gallery />
     <Footer />
   </div>
 )

@@ -2,20 +2,20 @@
   position: fixed;
   z-index: 1;
   width: 100rem;
-  height: 30vh;
+  height: 30rem;
   top: 0;
   left: 0;
   clip-path: polygon(
     0 0,
-    100vw 0,
-    0 30vh
+    100rem 0,
+    0 30rem
   );
   background: linear-gradient(175deg, rgba(0,0,0,1), rgba(10,10,10,.92), rgba(0,0,0,.1));
 }
 
 .header-title {
   position: absolute;
-  top: 3vh;
+  top: 3rem;
   left: 5rem;
   width: 35rem;
   margin: 0;
@@ -28,7 +28,7 @@
 
 .header-icon-bar {
   position: absolute;
-  top: 2vh;
+  top: 2rem;
   left: 28rem;
 }
 
@@ -46,7 +46,7 @@
 
 .header-nav {
   position: absolute;
-  top: 18vh;
+  top: 18rem;
   left: 4rem;
   width: 98rem;
   margin: 0;
