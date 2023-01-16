@@ -2,24 +2,24 @@
 
 .landing-title {
   margin: 0;
-  padding-left: 3vw;
+  padding-left: 3rem;
   opacity: .33;
   letter-spacing: 3px;
-  font-size: 5vw;
+  font-size: 5rem;
   font-weight: bolder;
 }
 
 .landing-content {
   margin: 0 auto;
-  padding-left: 15vw;
-  width: 60vw;
+  padding-left: 15rem;
+  width: 60rem;
 }
 
 .landing-text {
   margin: 0;
   padding: 9vh 0;
   opacity: .75;
-  font-size: 2vw;
+  font-size: 2rem;
   font-weight: bold;
   letter-spacing: 2px;
 }

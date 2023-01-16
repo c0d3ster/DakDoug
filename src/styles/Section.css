@@ -24,8 +24,8 @@
 .section-content-container {
   position: absolute;
   top: 46vh;
-  width: 93vw;
-  margin: 0 3vw;
+  width: 93rem;
+  margin: 0 3rem;
 }
 
 /* Custom container class to push content down from header */

@@ -6,7 +6,7 @@ import ProjectData from '../../../data/Projects.json'
 
 const Projects: FC = () => {
   const navList = ['Projects', 'Gallery', 'Contact']
-  const iconList = ['resume', 'Github']
+  const iconList = ['resume', 'github']
 
   return (
     <Section

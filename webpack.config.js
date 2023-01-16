@@ -10,7 +10,7 @@ module.exports = {
     sourceMapFilename: './bundle.js.map',
     pathinfo: true,
     path: BUILD_DIR,
-    filename: 'bundle.js',
+    filename: '[name].js',
     publicPath: '/'
   },
   module: {
