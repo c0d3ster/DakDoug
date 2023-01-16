@@ -1,11 +1,18 @@
-import React from 'react'
+import { FC, ReactNode } from 'react'
 import { Parallax } from 'react-scroll-parallax'
 
-import '../styles/Parallax.css'
+import '../../styles/Parallax.css'
 
-const ParallaxBackground = ({ background, min, max, children }) => (
+interface Props {
+  background: string
+  min: number
+  max: number
+  children: ReactNode
+}
+
+const ParallaxBackground: FC<Props> = ({ background, min, max, children }) => (
   <div className='parallax-container'>
-    <Parallax offsetYMin={min} offsetYMax={max} slowerScrollRate>
+    <Parallax translateY={[min, max]}>
       <div
         className='parallax-image'
         style={{

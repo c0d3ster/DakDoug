@@ -1,13 +1,12 @@
-var path = require('path');
+const path = require('path')
 
-var BUILD_DIR = path.join(__dirname, 'public');
-var APP_DIR = path.join(__dirname, 'src');
+var BUILD_DIR = path.join(__dirname, 'public')
+var APP_DIR = path.join(__dirname, 'src')
 
 module.exports = {
   devtool: 'source-map',
-  entry: APP_DIR + '/index.jsx',
+  entry: APP_DIR + '/index.tsx',
   output: {
-    devtoolLineToLine: true,
     sourceMapFilename: './bundle.js.map',
     pathinfo: true,
     path: BUILD_DIR,
@@ -17,44 +16,56 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['react', 'env', 'stage-2']
-          }
-        },
-        exclude: /node_modules/
-      },
-      {
-        test: /\.(css|less)$/,
-        use: [{
-            loader: 'style-loader'
-          },
+        test: /\.tsx?$/,
+        use: [
           {
-            loader: 'css-loader',
+            loader: 'ts-loader',
             options: {
-              importLoaders: 1
-            }
+              transpileOnly: true,
+              configFile: path.resolve(__dirname, 'tsconfig.json'),
+              allowTsInNodeModules: true
+            },
           },
+        ],
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/,
+        use: [
           {
-            loader: 'postcss-loader'
-          }
-        ]
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/',
+            },
+          },
+        ],
       },
       {
-        test: /\.(png|jpg)$/,
-        use: [{
-          loader: 'file-loader?name=[name].[ext]'
-        }]
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              name: '[name].[ext]',
+              outputPath: 'fonts/',
+            },
+          },
+        ],
       },
-      {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-        use: [{
-          loader: 'url-loader?limit=100000'
-        }]
-      }
-    ]
+    ],
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
   devServer: {
     port: 3000,
@@ -62,4 +73,4 @@ module.exports = {
       index: 'index.html'
     }
   }
-};
+}
