@@ -1,7 +1,7 @@
-var path = require('path');
+const path = require('path')
 
-var BUILD_DIR = path.join(__dirname, 'public');
-var APP_DIR = path.join(__dirname, 'src');
+var BUILD_DIR = path.join(__dirname, 'public')
+var APP_DIR = path.join(__dirname, 'src')
 
 module.exports = {
   devtool: 'source-map',
@@ -73,4 +73,4 @@ module.exports = {
       index: 'index.html'
     }
   }
-};
+}
