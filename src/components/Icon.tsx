@@ -17,9 +17,9 @@ const Icon: FC<Props> = ({ name, tip }) => {
   return (
     <div className='icon-container'>
       <a href={links[name]} target='_blank'>
-        <img src={`icons/${name}.png`} data-tip={tooltipInfo} data-for={name} />
+        <img src={`icons/${name}.png`} id={name} />
       </a>
-      <Tooltip id={name} delayShow={500} place='bottom' />
+      <Tooltip anchorId={name} content={tooltipInfo} delayShow={500} place='bottom' />
     </div>
   )
 }

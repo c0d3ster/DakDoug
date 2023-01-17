@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 var BUILD_DIR = path.join(__dirname, 'public')
 var APP_DIR = path.join(__dirname, 'src')
@@ -7,10 +8,10 @@ module.exports = {
   devtool: 'source-map',
   entry: APP_DIR + '/index.tsx',
   output: {
-    sourceMapFilename: './[name].js.map',
+    sourceMapFilename: './[file].map[query]',
     pathinfo: true,
     path: BUILD_DIR,
-    filename: '[name].js',
+    filename: process.env.mode == 'development' ? '[name].js' : 'bundle.js',
     publicPath: '/'
   },
   module: {
@@ -72,5 +73,8 @@ module.exports = {
     historyApiFallback: {
       index: 'index.html'
     }
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src/index.html') })
+  ],
 }
