@@ -1,14 +1,28 @@
+import { Links } from '@/types'
 
-export interface Links {
-  [key: string]: string
-}
-  
 export const links: Links = {
-  facebook: "https://www.facebook.com/cody.douglass.5",
-  github: "https://github.com/c0d3ster",
-  googleDrive: "https://drive.google.com/drive/folders/0B47MKtNMV2e5V01FOEFDVVdZUVk?usp=sharing",
-  instagram: "https://www.instagram.com/dakdoug/",
-  linkedIn: "https://www.linkedin.com/in/cody-douglass/",
-  resume: "resume.pdf"
+  facebook: {
+    name: 'Facebook',
+    url: 'https://www.facebook.com/cody.douglass.5'
+  },
+  github: {
+    name: 'Github',
+    url: 'https://github.com/c0d3ster',
+  },
+  googleDrive: {
+    name: 'Google Drive',
+    url: 'https://drive.google.com/drive/folders/0B47MKtNMV2e5V01FOEFDVVdZUVk?usp=sharing',
+  },
+  instagram: {
+    name: 'Instagram',
+    url: 'https://www.instagram.com/dakdoug/',
+  },
+  linkedIn: {
+    name: 'LinkedIn', 
+    url: 'https://www.linkedin.com/in/cody-douglass/',
+  },
+  resume: {
+    name: 'Resume',
+    url: 'resume.pdf',
+  },
 }
-  

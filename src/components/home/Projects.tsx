@@ -1,12 +1,14 @@
 import { FC } from 'react'
 
-import Section from '../../containers/SectionContainer'
-import ProjectBox from './ProjectBox'
-import ProjectData from '../../../data/Projects.json'
+import { Section } from 'components/organisms'
+import { InfoBox } from 'components/molecules'
+import { Link } from '@/types'
+import { links } from '@/data/Links'
+import ProjectData from '@/data/Projects.json'
 
-const Projects: FC = () => {
+export const Projects: FC = () => {
+  const iconList: Link[] = [links.resume, links.github]
   const navList = ['Projects', 'Gallery', 'Contact']
-  const iconList = ['resume', 'github']
 
   return (
     <Section
@@ -21,7 +23,7 @@ const Projects: FC = () => {
       </div>
       <div className='row'>
         {ProjectData.map((info, index) => (
-          <ProjectBox
+          <InfoBox
             background={info.background}
             key={index}
             count={index + 1}
@@ -33,5 +35,3 @@ const Projects: FC = () => {
     </Section>
   )
 }
-
-export default Projects

@@ -66,7 +66,11 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    alias: {
+      "@": path.resolve(__dirname, 'src/'),
+      "components": path.resolve(__dirname, 'src/components'),
+    },
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.css'],
   },
   devServer: {
     port: 3000,

@@ -2,14 +2,12 @@ import { FC } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
-import { useReactGA } from './hooks'
-import HomePage from './components/home/HomePage'
-import NotFoundPage from './components/NotFoundPage'
+import { HomePage, NotFoundPage } from '@/components/pages'
+import { useReactGA } from '@/hooks'
 
-import './styles/App.css'
+import '@/styles/App.css'
 
-const App:FC = () => {
-  
+export const App:FC = () => {
   useReactGA()
 
   return (
@@ -18,7 +16,7 @@ const App:FC = () => {
           <Routes>
             <Route
               path='/'
-              element={<HomePage/>}
+              element={<HomePage />}
             />
             <Route path='*' element={<NotFoundPage />} />
           </Routes>
@@ -26,5 +24,3 @@ const App:FC = () => {
     </ParallaxProvider>
   )
 }
-
-export default App

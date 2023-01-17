@@ -1,7 +1,8 @@
 import { FC, ReactNode } from 'react'
 
-import '../../styles/Landing.css'
-import ParallaxBackground from './ParallaxBackground'
+import { ParallaxBackground } from 'components/molecules/ParallaxBackground'
+
+import '@/styles/Landing.css'
 
 interface Props {
   background: string
@@ -9,12 +10,10 @@ interface Props {
   children: ReactNode
 }
 
-const LandingContainer: FC<Props> = ({ background, contentClass, children }) => (
-  <div className='landing-container'>
+export const Landing: FC<Props> = ({ background, contentClass, children }) => (
+  <>
     <ParallaxBackground min={-40} max={50} background={background}>
       <div className={contentClass}>{children}</div>
     </ParallaxBackground>
-  </div>
+  </>
 )
-
-export default LandingContainer
