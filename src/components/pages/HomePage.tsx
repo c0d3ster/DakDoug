@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, ReactElement } from 'react'
 
 import {
   HomeLanding,
@@ -6,18 +6,16 @@ import {
   Leadership,
   Projects,
   Gallery
-} from 'components/home'
-import { Footer } from 'components/organisms'
+} from 'components/organisms'
+import { ParallaxLandingScrollableSections } from 'components/templates'
 
 import '@/styles/Home.css'
 
 export const HomePage: FC = () => (
   <>
-    <HomeLanding />
-    <AboutMe />
-    <Leadership />
-    <Projects />
-    <Gallery />
-    <Footer />
+    <ParallaxLandingScrollableSections
+      landing={<HomeLanding />}
+      sections={[<AboutMe />, <Leadership />, <Projects />, <Gallery />]}
+    />
   </>
 )

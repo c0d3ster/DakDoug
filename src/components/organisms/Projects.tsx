@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
-import { Section } from 'components/organisms'
-import { InfoBox } from 'components/molecules'
+import { Section } from 'components/molecules'
+import { InfoBox } from 'components/atoms'
 import { Link } from '@/types'
 import { links } from '@/data/Links'
 import ProjectData from '@/data/Projects.json'

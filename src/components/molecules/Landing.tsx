@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react'
 
-import { ParallaxBackground } from 'components/molecules/ParallaxBackground'
+import { ParallaxBackground } from 'components/atoms/ParallaxBackground'
 
 import '@/styles/Landing.css'
 

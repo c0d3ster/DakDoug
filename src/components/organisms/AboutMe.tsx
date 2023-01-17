@@ -1,7 +1,7 @@
 import { FC, useState } from 'react'
 import classnames from 'classnames'
 
-import { Section } from 'components/organisms'
+import { Section } from 'components/molecules'
 import content from '@/data/Home.json'
 import { Link } from '@/types'
 import { links } from '@/data/Links'

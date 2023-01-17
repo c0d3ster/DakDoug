@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react'
 import classnames from 'classnames'
 
-import { Header } from 'components/organisms'
+import { Header } from 'components/molecules'
 import { Link } from '@/types'
 
 import '@/styles/Section.css'

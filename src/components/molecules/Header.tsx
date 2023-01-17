@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
 
-import { Icon } from 'components/molecules'
+import { Icon } from 'components/atoms'
 import { Link } from '@/types'
 
 import '@/styles/Header.css'

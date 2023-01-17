@@ -1,5 +1,0 @@
-export * from './AboutMe'
-export * from './Gallery'
-export * from './HomeLanding'
-export * from './Leadership'
-export * from './Projects'

@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { Section } from 'components/organisms'
+import { Section } from 'components/molecules'
 import { links } from '@/data/Links'
 import { Link } from '@/types'
 

@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
 
-import { Landing } from 'components/organisms'
+import { Landing } from 'components/molecules'
 
 import '@/styles/Landing.css'
 
