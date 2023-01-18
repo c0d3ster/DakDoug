@@ -1,86 +1,86 @@
 /********** About Styles ***********/
 
 .about-type-text {
-opacity: .4;
-margin: 20px;
-letter-spacing: 2px;
+  opacity: 0.4;
+  margin: 20px;
+  letter-spacing: 2px;
 }
 
 .about-prev-button {
-min-width: 20vw;
-padding: 3vh 6vw;
+  min-width: 20vw;
+  padding: 3vh 6vw;
 }
 
 .about-next-button {
-min-width: 20vw;
-padding: 3vh 6vw;
+  min-width: 20vw;
+  padding: 3vh 6vw;
 }
 
 .about-video-container {
-position: relative;
-width: 60vw;
-height: 60vh;
-margin: 3vh auto;
+  position: relative;
+  width: 60vw;
+  height: 60vh;
+  margin: 3vh auto;
 }
 
 .about-video {
-position: absolute;
-z-index: 2;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /********** Project Styles ***********/
 
 .project-box-container {
-position: relative;
-cursor: pointer;
-text-align: center;
-background: rgb(25, 25, 25);
-height: 45vh;
-margin: 0 2vw;
-border: 4px solid rgb(25,25,25);
-border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  background: rgb(25, 25, 25);
+  height: 45vh;
+  margin: 0 2vw;
+  border: 4px solid rgb(25, 25, 25);
+  border-radius: 3px;
 }
 .project-box-container--1 {
-margin-bottom: -15vh;
+  margin-bottom: -15vh;
 }
 .project-box-container--2 {
-margin: 0 2vw;
+  margin: 0 2vw;
 }
 .project-box-container--3 {
-margin-top: -15vh;
+  margin-top: -15vh;
 }
 
 .project-box-background {
-width: 100%;
-height: 100%;
-background-position: center;
-background-size: cover;
-opacity: .5;
-filter: blur(2px) grayscale(70%);
-transition: opacity 1s;
-border-radius: 3px;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+  filter: blur(2px) grayscale(70%);
+  transition: opacity 1s;
+  border-radius: 3px;
 }
 
 .project-box-container:hover .project-box-background {
-opacity: .75;
-filter: none;
+  opacity: 0.75;
+  filter: none;
 }
 
 .project-box-title {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-width: 100%;
-color: rgb(175, 175, 175);
-font-style: italic;
-transition: all 1s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  color: rgb(175, 175, 175);
+  font-style: italic;
+  transition: all 1s;
 }
 
 .project-box-container:hover .project-box-title {
-color:white;
-font-style: normal;
+  color: white;
+  font-style: normal;
 }

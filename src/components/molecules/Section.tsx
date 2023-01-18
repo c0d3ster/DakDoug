@@ -1,20 +1,22 @@
 import { FC, ReactNode } from 'react'
 import classnames from 'classnames'
 
-import '../../styles/Section.css'
-import Header from '../Header'
+import { Header } from 'components/molecules'
+import { Link } from '@/types'
+
+import '@/styles/Section.css'
 
 interface Props {
   name: string
   background: string
   title: string
   navList: string[]
-  iconList: string[]
+  iconList: Link[]
   children: ReactNode
   contentClass?: string
 }
 
-const SectionContainer: FC<Props> = ({
+export const Section: FC<Props> = ({
   name,
   background,
   title,
@@ -37,4 +39,3 @@ const SectionContainer: FC<Props> = ({
   </div>
 )
 
-export default SectionContainer

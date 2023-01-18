@@ -1,11 +1,12 @@
 import { FC } from 'react'
 
-import Section from '../containers/SectionContainer'
-import { links } from '../../data/Links'
+import { Section } from 'components/molecules'
+import { links } from '@/data/Links'
+import { Link } from '@/types'
 
-const Gallery: FC = () => {
+export const Gallery: FC = () => {
+  const iconList: Link[] = [links.googleDrive, links.instagram]
   const navList = ['Gallery', 'Contact']
-  const iconList = ['googleDrive', 'instagram']
 
   return (
     <Section
@@ -22,7 +23,7 @@ const Gallery: FC = () => {
         <h2 className='col center'>Coming soon...</h2>
       </div>
       <div className='row'>
-        <a href={links.GoogleDrive} target='_blank' className='col center'>
+        <a href={links.googleDrive.url} target='_blank' className='col center'>
           Click here to view my Finalized Shots folder on Google Drive in the
           meantime
         </a>
@@ -30,5 +31,3 @@ const Gallery: FC = () => {
     </Section>
   )
 }
-
-export default Gallery

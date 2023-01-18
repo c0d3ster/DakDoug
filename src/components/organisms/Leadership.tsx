@@ -1,11 +1,13 @@
 import { FC } from 'react'
 
-import Section from '../containers/SectionContainer'
-import content from '../../data/Home.json'
+import { Section } from 'components/molecules'
+import content from '@/data/Home.json'
+import { links } from '@/data/Links'
+import { Link } from '@/types'
 
-const Leadership: FC = () => {
+export const Leadership: FC = () => {
+  const iconList: Link[] = [links.resume, links.linkedIn]
   const navList = ['Leadership', 'Projects', 'Gallery', 'Contact']
-  const iconList = ['resume', 'linkedIn']
 
   return (
     <Section
@@ -24,5 +26,3 @@ const Leadership: FC = () => {
     </Section>
   )
 }
-
-export default Leadership

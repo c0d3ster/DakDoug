@@ -2,7 +2,7 @@
 node_modules/
 
 # Bundles built by Webpack need not be committed
-public/bundle.js*
+public/main.js*
 
 # Certificate files for HTTPS
 *.pem
@@ -12,3 +12,4 @@ ssl/
 .DS_Store
 
 yarn-error.log
+.vercel

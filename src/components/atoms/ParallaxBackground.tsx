@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react'
 import { Parallax } from 'react-scroll-parallax'
 
-import '../../styles/Parallax.css'
+import '@/styles/Parallax.css'
 
 interface Props {
   background: string
@@ -10,7 +10,7 @@ interface Props {
   children: ReactNode
 }
 
-const ParallaxBackground: FC<Props> = ({ background, min, max, children }) => (
+export const ParallaxBackground: FC<Props> = ({ background, min, max, children }) => (
   <div className='parallax-container'>
     <Parallax translateY={[min, max]}>
       <div
@@ -25,5 +25,3 @@ const ParallaxBackground: FC<Props> = ({ background, min, max, children }) => (
     <div className='parallax-children'>{children}</div>
   </div>
 )
-
-export default ParallaxBackground

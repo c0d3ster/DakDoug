@@ -1,14 +1,16 @@
 import { FC, useState } from 'react'
 import classnames from 'classnames'
 
-import Section from '../containers/SectionContainer'
-import content from '../../data/Home.json'
+import { Section } from 'components/molecules'
+import content from '@/data/Home.json'
+import { Link } from '@/types'
+import { links } from '@/data/Links'
 
-const AboutMe: FC = () => {
+export const AboutMe: FC = () => {
   const [count, setCount] = useState<number>(0)
   const [displayVideo, setDisplayVideo] = useState<boolean>(false)
   
-  const iconList = ['resume', 'linkedIn', 'facebook', 'instagram']
+  const iconList: Link[] = [links.resume, links.linkedIn, links.facebook, links.instagram]
   const navList = ['About', 'Leadership', 'Projects', 'Gallery', 'Contact']
   
   const currItem = content.about[count]
@@ -78,5 +80,3 @@ const AboutMe: FC = () => {
     </Section>
   )
 }
-
-export default AboutMe
