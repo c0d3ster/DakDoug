@@ -11,7 +11,7 @@ export const DesignConsiderations: FC = () => {
   return (
     <Section
       name='Considerations'
-      background='./AudiusStudio.webp'
+      background='./AudiusStudio.png'
       title='Dakota Douglass'
       navList={navList}
       iconList={iconList}
