@@ -3,6 +3,7 @@ node_modules/
 
 # Bundles built by Webpack need not be committed
 public/main.js*
+public/bundle.js*
 
 # Certificate files for HTTPS
 *.pem
