@@ -12,7 +12,7 @@ export const DesignConsiderations: FC = () => {
     <Section
       name='Considerations'
       background='./AudiusStudio.png'
-      title='Dakota Douglass'
+      title='The Thought'
       navList={navList}
       iconList={iconList}
     >

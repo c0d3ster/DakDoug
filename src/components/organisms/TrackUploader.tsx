@@ -12,7 +12,7 @@ export const TrackUploader: FC = () => {
     <Section
       name='Uploader'
       background='./PurpleMilkyWay.jpg'
-      title='Dakota Douglass'
+      title='The Prompt'
       navList={navList}
       iconList={iconList}
     >
