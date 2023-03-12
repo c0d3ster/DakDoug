@@ -6,14 +6,10 @@
   letter-spacing: 2px;
 }
 
-.about-prev-button {
+.about-nav-button {
+  cursor: pointer;
   min-width: 20vw;
-  padding: 3vh 6vw;
-}
-
-.about-next-button {
-  min-width: 20vw;
-  padding: 3vh 6vw;
+  height: 3em;
 }
 
 .about-video-container {

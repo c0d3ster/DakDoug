@@ -1,5 +1,6 @@
 import { FC, useState } from 'react'
 import classnames from 'classnames'
+import { NavigateNext, NavigateBefore } from '@mui/icons-material'
 
 import { Section } from 'components/molecules'
 import content from '@/data/Home.json'
@@ -14,10 +15,10 @@ export const AboutMe: FC = () => {
   const navList = ['About', 'Leadership', 'Projects', 'Gallery', 'Contact']
   
   const currItem = content.about[count]
-  const prevButton = classnames('about-prev-button', {
+  const prevButton = classnames('about-nav-button', {
     hidden: count == 0 || displayVideo,
   })
-  const nextButton = classnames('about-next-button', {
+  const nextButton = classnames('about-nav-button', {
     hidden: count == content.about.length - 1 || displayVideo
   })
 
@@ -64,13 +65,9 @@ export const AboutMe: FC = () => {
       ) : (
         <div>
           <div className='row even-space'>
-            <button className={prevButton} onClick={() => setCount(count-1)}>
-              previous
-            </button>
+            <NavigateBefore className={prevButton} fontSize={'large'} onClick={() => setCount(count-1)} />
             <h2> Who Is Cody Douglass?</h2>
-            <button className={nextButton} onClick={() => setCount(count+1)}>
-              next
-            </button>
+            <NavigateNext className={nextButton} fontSize={'large'} onClick={() => setCount(count+1)} />
           </div>
           <div className='row'>
             <p className='col'>{currItem.description}</p>
