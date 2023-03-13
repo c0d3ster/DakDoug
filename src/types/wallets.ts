@@ -1,4 +1,4 @@
 export interface WalletContextType {
-    walletAddress: string | null
+    walletAddress: string
     setWalletAddress: React.Dispatch<React.SetStateAction<string>>
 }

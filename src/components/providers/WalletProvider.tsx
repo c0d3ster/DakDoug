@@ -3,7 +3,7 @@ import { createContext, FC } from 'react'
 import { WalletContextType } from '@/types'
 
 export const WalletContext = createContext<WalletContextType>({
-  walletAddress: null,
+  walletAddress: '',
   setWalletAddress: () => {},
 })
 
