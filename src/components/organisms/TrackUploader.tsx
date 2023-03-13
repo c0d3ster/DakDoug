@@ -15,6 +15,7 @@ export const TrackUploader: FC = () => {
       title='The Prompt'
       navList={navList}
       iconList={iconList}
+      hasWallet={true}
     >
       <div className='row'>
         <h2 className='col center'>Track Uploader</h2>

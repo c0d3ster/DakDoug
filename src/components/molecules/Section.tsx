@@ -1,6 +1,7 @@
 import { FC, ReactNode } from 'react'
 import classnames from 'classnames'
 
+import { WalletButton } from 'components/atoms'
 import { Header } from 'components/molecules'
 import { Link } from '@/types'
 
@@ -14,6 +15,7 @@ interface Props {
   iconList: Link[]
   children: ReactNode
   contentClass?: string
+  hasWallet?: boolean
 }
 
 export const Section: FC<Props> = ({
@@ -24,6 +26,7 @@ export const Section: FC<Props> = ({
   iconList,
   contentClass,
   children,
+  hasWallet = false,
 }) => (
   <div className='section-container' id={name}>
     <div
@@ -35,6 +38,7 @@ export const Section: FC<Props> = ({
       }}
     />
     <Header title={title} navList={navList} iconList={iconList} />
+    {hasWallet && <WalletButton />}
     <div className={classnames('section-content-container', contentClass)}>{children}</div>
   </div>
 )
