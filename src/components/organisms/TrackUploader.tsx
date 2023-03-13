@@ -1,12 +1,15 @@
 import { FC } from 'react'
 
-import { Link } from '@/types'
 import { Section } from 'components/molecules'
+import { Link } from '@/types'
 import { links } from '@/data/Links'
+import { useWalletContext } from '@/hooks'
 
 export const TrackUploader: FC = () => {
   const iconList: Link[] = [links.resume, links.linkedIn]
   const navList = ['Uploader', 'Considerations', 'Contact']
+  
+  const { walletAddress } = useWalletContext()
 
   return (
     <Section
@@ -21,7 +24,7 @@ export const TrackUploader: FC = () => {
         <h2 className='col center'>Track Uploader</h2>
       </div>
       <div className='row'>
-        <p className='col center'>test</p>
+        <p className='col center'>{walletAddress}</p>
       </div>
     </Section>
   )

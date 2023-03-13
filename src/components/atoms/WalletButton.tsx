@@ -1,9 +1,11 @@
-import { FC, useCallback, useState } from 'react'
+import { FC, useCallback } from 'react'
+
+import { useWalletContext } from '@/hooks'
 
 import '@/styles/Wallet.css'
 
 export const WalletButton: FC = () => {
-  const [walletAddress, setWalletAddress] = useState<string | null>(null);
+  const { walletAddress, setWalletAddress } = useWalletContext()
 
   const connectWallet = async () => {
     const { solana } = window as any
