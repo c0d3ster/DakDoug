@@ -1,10 +1,13 @@
 import { createContext, FC } from 'react'
+import { AnchorProvider, Program } from '@coral-xyz/anchor'
 
 import { WalletContextType } from '@/types'
 
 export const WalletContext = createContext<WalletContextType>({
-  walletAddress: '',
+  anchorProvider: {} as AnchorProvider,
+  getProgram: () => Promise.resolve({} as Program),
   setWalletAddress: () => {},
+  walletAddress: '',
 })
 
 interface Props {
