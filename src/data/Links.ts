@@ -23,6 +23,6 @@ export const links: Links = {
   },
   resume: {
     name: 'Resume',
-    url: 'resume.pdf',
+    url: 'Resume.pdf',
   },
 }
