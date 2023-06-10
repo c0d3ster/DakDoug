@@ -10,4 +10,5 @@
     ],
     "editor.autoClosingBrackets": "always",
     "editor.autoIndent": "full",
+    "editor.tabSize": 2,
 }

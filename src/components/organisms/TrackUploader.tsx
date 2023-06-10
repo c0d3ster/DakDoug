@@ -1,27 +1,67 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
+import { BN, web3, utils } from '@coral-xyz/anchor'
 
-import { Section } from 'components/molecules'
-import { AudioExtensions, AudioMimeTypes, Link } from '@/types'
+import { Section, TrackInput } from 'components/molecules'
+import { Link } from '@/types'
 import { links } from '@/data/Links'
-import { useWalletContext } from '@/hooks'
+import { usePinata, useWalletContext } from '@/hooks'
 
 export const TrackUploader: FC = () => {
   const iconList: Link[] = [links.resume, links.linkedIn]
   const navList = ['Uploader', 'Considerations', 'Contact']
-  const acceptedMedia = [...Object.values(AudioMimeTypes), ...Object.values(AudioExtensions)]
 
-  const { walletAddress } = useWalletContext()
+  const [track, setTrack] = useState<File | null>(null)
+  const [error, setError] = useState<String>('')
 
-  const handleTrackUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (!e.target.files) {
-      console.error('no file given')
+  const { pinFile } = usePinata()
 
+  const { anchorProvider, getProgram } = useWalletContext()
+
+  const handleUpload = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+    e.stopPropagation()
+
+    if (!track) {
+      setError('no track selected')
       return
     }
 
-    const files = [...Array.from(e.target.files)]
+    const response = await pinFile(track)
 
-    console.log(files[0])
+    if (!response) {
+      setError('error uploading file')
+      return
+    } 
+
+    const program = await getProgram()
+
+    const [counterPDA] = web3.PublicKey.findProgramAddressSync([
+      utils.bytes.utf8.encode('counter')
+    ], program.programId)
+
+    const { idCounter } = await program.account.trackCounter.fetch(counterPDA)
+
+    const counterBytes = new BN(idCounter).toArrayLike(Buffer, 'le', 8)
+
+    const [trackAccountPDA] = web3.PublicKey.findProgramAddressSync([
+      utils.bytes.utf8.encode('track'),
+      counterBytes,
+    ], program.programId)
+
+    try {
+      console.info(response.data.IpfsHash, counterBytes)
+
+      await program.methods.addTrack(response.data.IpfsHash).accounts({
+        track: trackAccountPDA,
+        trackCounter: counterPDA,
+        user: anchorProvider.wallet.publicKey,
+      }).rpc()
+
+      setTrack(null)
+    } catch (e: any) {
+      setError(e.message)
+      return
+    }
   }
 
   return (
@@ -37,13 +77,13 @@ export const TrackUploader: FC = () => {
         <h2 className='col center'>Track Uploader</h2>
       </div>
       <div className='row'>
-        <input
-          accept={acceptedMedia.join(',')}
-          onChange={handleTrackUpload}
-          multiple={false}
-          type='file'
-        />
-        <p>{walletAddress}</p>
+        <TrackInput track={track} setTrack={setTrack} handleUpload={handleUpload} />
+      </div>
+      <div className='row'>
+        <p>{error}</p>
+      </div>
+      <div className='row'>
+        <h2 className='col center'>Previous Uploads</h2>
       </div>
     </Section>
   )

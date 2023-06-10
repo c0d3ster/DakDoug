@@ -83,6 +83,9 @@ module.exports = {
     new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src/index.html') }),
     new webpack.ProvidePlugin({
       process: 'process/browser',
-    })
+    }),
+    new webpack.ProvidePlugin({
+      Buffer: ['buffer', 'Buffer'],
+    }),
   ],
 }

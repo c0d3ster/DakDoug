@@ -1,8 +1,7 @@
 import { FC, ReactNode } from 'react'
 import classnames from 'classnames'
 
-import { WalletButton } from 'components/atoms'
-import { Header } from 'components/molecules'
+import { Header, Wallet } from 'components/molecules'
 import { Link } from '@/types'
 
 import '@/styles/Section.css'
@@ -38,7 +37,7 @@ export const Section: FC<Props> = ({
       }}
     />
     <Header title={title} navList={navList} iconList={iconList} />
-    {hasWallet && <WalletButton />}
+    {hasWallet && <Wallet />}
     <div className={classnames('section-content-container', contentClass)}>{children}</div>
   </div>
 )

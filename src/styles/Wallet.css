@@ -1,7 +1,7 @@
-.wallet-button {
+.wallet-wrapper {
     position: fixed;
     top: 10vh;
     left: 85vw;
-    padding: 1rem;
     font-size: 1em;
+    z-index: 10;
 }
