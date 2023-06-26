@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import { clusterApiUrl, Connection, PublicKey, ConfirmOptions } from '@solana/web3.js'
 import { AnchorProvider, Program } from '@coral-xyz/anchor'
+import { ToastContainer } from 'react-toastify'
 
 import { AdminPage, AudiusPage, HomePage, NotFoundPage } from 'components/pages'
 import { WalletProvider } from 'components/providers'
@@ -10,6 +11,7 @@ import { useReactGA } from '@/hooks'
 import { WalletContextType } from '@/types'
 import { trackUploaderProgramId } from '@/settings'
 
+import 'react-toastify/dist/ReactToastify.css'
 import '@/styles/Global.css'
 
 const network = clusterApiUrl('devnet')
@@ -48,6 +50,10 @@ export const App:FC = () => {
   return (
     <WalletProvider walletContext={walletContext}>
       <ParallaxProvider>
+        <ToastContainer
+          position={'bottom-center'}
+          theme={'dark'}
+        />
         <Router>
             <Routes>
               <Route

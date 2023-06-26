@@ -1,5 +1,6 @@
 import { FC, useState } from 'react'
 import { BN, web3, utils } from '@coral-xyz/anchor'
+import { toast } from 'react-toastify'
 
 import { Section, TrackInput } from 'components/molecules'
 import { Link } from '@/types'
@@ -8,10 +9,9 @@ import { usePinata, useWalletContext } from '@/hooks'
 
 export const TrackUploader: FC = () => {
   const iconList: Link[] = [links.resume, links.linkedIn]
-  const navList = ['Uploader', 'Considerations', 'Contact']
+  const navList = ['Uploader', 'Explorer', 'Considerations', 'Contact']
 
   const [track, setTrack] = useState<File | null>(null)
-  const [error, setError] = useState<String>('')
 
   const { pinFile } = usePinata()
 
@@ -22,14 +22,14 @@ export const TrackUploader: FC = () => {
     e.stopPropagation()
 
     if (!track) {
-      setError('no track selected')
+      toast.error('no track selected')
       return
     }
 
     const response = await pinFile(track)
 
     if (!response) {
-      setError('error uploading file')
+      toast.error('error uploading file')
       return
     } 
 
@@ -41,16 +41,12 @@ export const TrackUploader: FC = () => {
 
     const { idCounter } = await program.account.trackCounter.fetch(counterPDA)
 
-    const counterBytes = new BN(idCounter).toArrayLike(Buffer, 'le', 8)
-
     const [trackAccountPDA] = web3.PublicKey.findProgramAddressSync([
       utils.bytes.utf8.encode('track'),
-      counterBytes,
+      new BN(idCounter).toArrayLike(Buffer, 'le', 8),
     ], program.programId)
 
     try {
-      console.info(response.data.IpfsHash, counterBytes)
-
       await program.methods.addTrack(response.data.IpfsHash).accounts({
         track: trackAccountPDA,
         trackCounter: counterPDA,
@@ -58,8 +54,9 @@ export const TrackUploader: FC = () => {
       }).rpc()
 
       setTrack(null)
+      toast.success(`Uploaded track #${idCounter} successfully`)
     } catch (e: any) {
-      setError(e.message)
+      toast.error(e.message)
       return
     }
   }
@@ -78,9 +75,6 @@ export const TrackUploader: FC = () => {
       </div>
       <div className='row'>
         <TrackInput track={track} setTrack={setTrack} handleUpload={handleUpload} />
-      </div>
-      <div className='row'>
-        <p>{error}</p>
       </div>
       <div className='row'>
         <h2 className='col center'>Previous Uploads</h2>

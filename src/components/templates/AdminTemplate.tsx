@@ -4,7 +4,7 @@ import { web3, utils } from '@coral-xyz/anchor'
 
 import { Section, Wallet } from 'components/molecules'
 import { useWalletContext } from '@/hooks'
-import { pinataJWT } from '@/settings'
+import { pinataConfig } from '@/settings'
 
 export const AdminTemplate: FC = () => {
   const { getProgram, anchorProvider } = useWalletContext()
@@ -32,7 +32,7 @@ const testPinata = async () => {
     method: 'get',
     url: 'https://api.pinata.cloud/data/testAuthentication',
     headers: { 
-      'Authorization': pinataJWT
+      'Authorization': pinataConfig.jwt,
     }
   };
   

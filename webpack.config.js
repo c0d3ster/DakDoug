@@ -74,10 +74,14 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.css'],
   },
   devServer: {
+    allowedHosts: 'all',
     port: 3000,
     historyApiFallback: {
       index: 'index.html'
-    }
+    },
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src/index.html') }),
