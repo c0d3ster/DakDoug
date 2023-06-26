@@ -8,12 +8,25 @@ import '@/styles/Wallet.css'
 export const Wallet: FC = () => {
   const { walletAddress, setWalletAddress } = useWalletContext()
 
+  const checkForAutoconnect = async () => {
+    try {
+      const { solana } = window
+  
+      if (solana?.isPhantom) {
+        const response = await solana.connect({ onlyIfTrusted: true})
+        setWalletAddress(response.publicKey.toString())
+      }
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   const connectWallet = async () => {
     try {
       const { solana } = window
   
       if (solana) {
-        const response = await solana.connect({ onlyIfTrusted: true})
+        const response = await solana.connect()
         setWalletAddress(response.publicKey.toString())
       }
     } catch (error) {
@@ -23,7 +36,7 @@ export const Wallet: FC = () => {
 
   useEffect(() => {
     const onLoad = async () => {
-      await connectWallet()
+      await checkForAutoconnect()
     }
 
     window.addEventListener('load', onLoad)
