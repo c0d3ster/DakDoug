@@ -16,9 +16,10 @@ it forms the shape which the image will fill*/
 /* image/background which will have parallax effect added to it
 fills the parallax container background */
 .parallax-image {
-  width: 99vw;
+  width: 99.1vw;
   height: 130vh;
   background-size: cover;
+  background-position: cover;
 }
 
 .parallax-children {
