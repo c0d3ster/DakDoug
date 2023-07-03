@@ -21,7 +21,7 @@ export const Leadership: FC = () => {
         <h2 className='col center'>Leadership Development</h2>
       </div>
       <div className='row'>
-        <p className='col'>{content.leadership}</p>
+        <p className='col center'>{content.leadership}</p>
       </div>
     </Section>
   )

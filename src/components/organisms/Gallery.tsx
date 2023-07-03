@@ -20,13 +20,17 @@ export const Gallery: FC = () => {
         <h2 className='col center'>Gallery</h2>
       </div>
       <div className='row'>
-        <h2 className='col center'>Coming soon...</h2>
-      </div>
-      <div className='row'>
-        <a href={links.googleDrive.url} target='_blank' className='col center'>
-          Click here to view my Finalized Shots folder on Google Drive in the
-          meantime
-        </a>
+          <a href={links.etsy.url}>
+            <div className='gallery-title'>Eclipsed Galaxy</div>
+            <video
+              className='gallery-video'
+              onMouseOver={e => (e.target as any).play()}
+              onMouseOut={e => (e.target as any).pause()}
+              loop={true}
+            >
+              <source src='https://drive.google.com/uc?export=download&id=1aV7wxk54UIgb2eHNTJ0dSmg500f3dM3B' type='video/mp4' />
+            </video>
+          </a>
       </div>
     </Section>
   )

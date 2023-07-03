@@ -1,6 +1,10 @@
 import { Links } from '@/types'
 
 export const links: Links = {
+  etsy: {
+    name: 'Etsy',
+    url: 'https://www.etsy.com/shop/dakdoug'
+  },
   facebook: {
     name: 'Facebook',
     url: 'https://www.facebook.com/cody.douglass.5'
