@@ -54,7 +54,7 @@ button:focus {
 }
 
 .col {
-  flex-basis: 100%;
+  flex: 1;
   max-width: 1024px;
 }
 
@@ -84,11 +84,7 @@ button:focus {
     100% { transform: rotate(360deg); }
 }
 
-@media (min-width: 800px) {
-  .col {
-    flex: 1;
-  }
-
+@media screen and (min-width: 1024px) {
   html {
     font-size: 16px;
   }
