@@ -29,7 +29,7 @@
 .header-icon-bar {
   position: absolute;
   top: 2vh;
-  left: 28vw;
+  left: 40vw;
 }
 
 .icon-container {
@@ -39,7 +39,7 @@
 
 .icon-container > a > img {
   cursor: pointer;
-  width: 3vw;
+  width: 5vw;
   height: auto;
   opacity: .8;
 }
@@ -52,7 +52,7 @@
   margin: 0;
   padding: 0;
   transform-origin: left top 0;
-  transform: rotate(-5deg);
+  transform: rotate(-8deg);
   list-style-type: none;
 }
 
@@ -73,19 +73,44 @@
   font-size: .85em;
 }
 .header-item--3 {
-  opacity: .45;
-  margin-right: 8vw;
-  font-size: .65em;
+  display: none;
 }
 .header-item--4 {
-  opacity: .3;
-  margin-right: 6vw;
-  font-size: .45em;
+  display: none;
+
 }
 .header-item--5 {
-  opacity: .2;
-  margin-right: 4vw;
-  font-size: .25em;
+  display: none;
 }
 
-/*** Add fade-in and fade-out styles for header transitions ***/
+@media screen and (min-width: 1024px) {
+  .header-nav {
+    transform: rotate(-5deg);
+  }
+  .header-item--3 {
+    display: inline;
+    opacity: .45;
+    margin-right: 8vw;
+    font-size: .65em;
+  }
+  .header-item--4 {
+    display: inline;
+    opacity: .3;
+    margin-right: 6vw;
+    font-size: .45em;
+  }
+  .header-item--5 {
+    display: inline;
+    opacity: .2;
+    margin-right: 4vw;
+    font-size: .25em;
+  }
+
+  .header-icon-bar {
+    left: 28vw;
+  }
+
+  .icon-container > a > img {
+    max-width: 44px;
+  }
+}

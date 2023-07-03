@@ -28,7 +28,6 @@ export const AboutMe: FC = () => {
       title='Cody Douglass'
       navList={navList}
       iconList={iconList}
-      contentClass='pushed-section-content-container'
     >
       <div className='row center'>
         <div className='col'>
