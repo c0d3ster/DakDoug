@@ -72,7 +72,7 @@ export const AboutMe: FC = () => {
             </button>
           </div>
           <div className='row'>
-            <p className='col'>{currItem.description}</p>
+            <p className='col center'>{currItem.description}</p>
           </div>
         </div>
       )}

@@ -4,6 +4,7 @@ export interface Link {
 }
 
 export interface Links {
+    etsy: Link
     facebook: Link
     github: Link
     googleDrive: Link

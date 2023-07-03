@@ -37,7 +37,7 @@
   cursor: pointer;
   text-align: center;
   background: rgb(25, 25, 25);
-  height: 45vh;
+  height: 35vh;
   margin: 0 2vw;
   border: 4px solid rgb(25, 25, 25);
   border-radius: 3px;
@@ -81,4 +81,35 @@
 .project-box-container:hover .project-box-title {
   color: white;
   font-style: normal;
+}
+
+.gallery-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: rgb(206, 150, 91);
+  font-style: italic;
+  opacity: 1;
+}
+
+.gallery-video {
+  margin: 20px;
+  width: 80vw;
+  border-radius: 10vw;
+  opacity: .75;
+}
+
+.gallery-video:hover {
+  opacity: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  .project-box-container {
+    height: 45vh;
+  }
+
+  .gallery-video {
+    width: 50vw;
+  }
 }
