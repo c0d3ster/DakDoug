@@ -11,15 +11,21 @@
 
 .landing-content {
   margin: 0 auto;
-  padding-left: 15rem;
+  padding: 0 5rem;
   width: 60rem;
 }
 
 .landing-text {
   margin: 0;
-  padding: 9rem 0;
+  padding: 7rem 0;
   opacity: .75;
   font-size: 2rem;
   font-weight: bold;
   letter-spacing: 2px;
+}
+
+@media (min-width: 800px) {
+  .landing-content {
+    padding: 0 25rem;
+  }
 }

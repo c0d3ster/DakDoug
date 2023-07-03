@@ -1,6 +1,6 @@
 /********** Global Styles **********/
 html {
-  font-size: 16px;
+  font-size: 24px;
   line-height: 1.5;
 }
 
@@ -51,11 +51,11 @@ button:focus {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  max-width: 1080px;
 }
 
 .col {
   flex-basis: 100%;
+  max-width: 1024px;
 }
 
 .center {
@@ -84,8 +84,12 @@ button:focus {
     100% { transform: rotate(360deg); }
 }
 
-@media screen and (min-width: 800px) {
+@media (min-width: 800px) {
   .col {
     flex: 1;
+  }
+
+  html {
+    font-size: 16px;
   }
 }
