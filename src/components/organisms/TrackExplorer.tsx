@@ -2,7 +2,7 @@ import { FC, useState } from 'react'
 import { BN, web3, utils } from '@coral-xyz/anchor'
 import { toast } from 'react-toastify'
 
-import { Section } from 'components/molecules'
+import { Section, TrackInput } from 'components/molecules'
 import { Link } from '@/types'
 import { links } from '@/data/Links'
 import { usePinata, useWalletContext } from '@/hooks'
@@ -12,7 +12,7 @@ export const TrackExplorer: FC = () => {
   const navList = ['Explorer', 'Considerations', 'Contact']
 
   const [value, setValue] = useState<string>('')
-  const [track, setTrack] = useState<File | null>(null)
+  const [track, setTrack] = useState<any>(null)
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value)
@@ -34,9 +34,12 @@ export const TrackExplorer: FC = () => {
 
     const trackData = await program.account.track.fetch(trackPDA)
 
-    const response = await retrieveFile(trackData.cid)
+    const audioData = await retrieveFile(trackData.cid)
 
-    toast.info(JSON.stringify(response))
+    if (audioData) {
+      setTrack(audioData)
+      toast.success(`Track #${trackData.id} successfully retrieved`)
+    }
   }
 
   return (
@@ -52,8 +55,13 @@ export const TrackExplorer: FC = () => {
         <h2 className='col center'>Track Explorer</h2>
       </div>
       <div className='row'>
-        <p>Find track by id: </p><input value={value} onChange={onChange}/><button onClick={findTrackById}>Find Track</button>
+        <p>Track id: </p><input value={value} onChange={onChange}/><button onClick={findTrackById}>Find Track</button>
       </div>
+      {track && <div>
+        <video controls>
+          <source src={track.audioData} />
+        </video>
+      </div>}
       <div className='row'>
         <h2 className='col center'>Recent Uploads</h2>
       </div>

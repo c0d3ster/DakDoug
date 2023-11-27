@@ -79,9 +79,6 @@ module.exports = {
     historyApiFallback: {
       index: 'index.html'
     },
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-    },
   },
   plugins: [
     new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src/index.html') }),

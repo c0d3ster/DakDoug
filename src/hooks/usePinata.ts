@@ -32,15 +32,11 @@ export const usePinata = () => {
 
   const retrieveFile = async (cid: string) => {
     try { 
-      const config = {
-        method: 'get',
-        url: `${pinataConfig.gatewayUrl}${cid}`,
-        headers: { 
-          'Authorization': pinataConfig.jwt,
-          'Access-Control-Allow-Origin': '*',
-        }
-      }
-      return await axios(config)
+      const response = await axios.get(`${pinataConfig.gatewayUrl}${cid}`)
+
+      console.info(response)
+
+      return { audioData: response.data }
     } catch (error) {
       console.log(error)
     }
